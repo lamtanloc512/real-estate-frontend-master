@@ -1,0 +1,46 @@
+<header>
+    <nav class="navbar navbar-expand-lg p-0 py-3">
+        <div class="container">
+            <a href="#" class="navbar-brand logo">
+                <img alt="logo-white" src="/images/header/logo-white 1.png">
+            </a>
+
+            <!-- Navbar Toggler (for Mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Navbar -->
+            <div class="navbar-menu d-flex justify-content-end align-items-center">
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item <%= currentRoute === '/' ? 'active' : '' %>">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item <%= currentRoute === '/about' ? 'active' : '' %>">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                        <li class="nav-item <%= currentRoute === '/properties' ? 'active' : '' %>">
+                            <a class="nav-link" href="/properties">Properties</a>
+                        </li>
+                        <li class="nav-item <%= currentRoute === '/contact-us' ? 'active' : '' %>">
+                            <a class="nav-link" href="/contact-us">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- User and Add Property Buttons -->
+                <button class="header-actions-user" id="userMenuToggle" aria-label="User">
+                    <img class="w-100" alt="img-avarta" src="/images/header/avarta.png">
+                </button>
+                <div class="dropdown-menu" id="userDropdown">
+                    <a class="dropdown-item" href="/user/login">Sign In</a>
+                    <a class="dropdown-item" href="/user/info" style="display: none;">User Info</a>
+                    <a class="dropdown-item" href="/user/property-list" style="display: none;">Property List</a>
+                    <a class="dropdown-item" href="/" style="display: none;">Sign Out</a>
+                </div>
+                <button class="btn header-actions-add-property">Add Property</button>
+            </div>
+        </div>
+    </nav>
+</header>

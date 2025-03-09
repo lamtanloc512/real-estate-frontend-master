@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+  <!-- DataTables -->
+  <link rel="stylesheet" href="/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+  <link rel="stylesheet" href="/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+  <link rel="stylesheet" href="/plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <%- include('./partials/left-menu.ejs', { activePage: 'administrative-division' ,
+      pageHeader: 'Administrative Division' }) %>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+
+        <!-- Main content -->
+        <section class="content pt-5">
+          <div class="container-fluid">
+            <h2 style="text-align: center">Administrative Division Management</h2>
+            <div class="jumbotron container">
+              <form id="inputform01" class="jumbotron container">
+                <div class="row form-group align-items-center">
+                  <div class="col-sm-2">
+                    <label for="province-select">Province</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <select id="province-select" name="province" class="form-control">
+                      <option disabled selected value>--Select Province--</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="row align-items-center">
+                      <div class="col-sm-4">
+                        <button class="btn btn-success" id="btn-add-province" style="width: 100%;">Add Province</button>
+                      </div>
+                      <div class="col-sm-4">
+                        <button class="btn btn-warning" id="btn-update-province" style="width: 100%;">Update Province</button>
+                      </div>
+                      <div class="col-sm-4">
+                        <button class="btn btn-danger" id="btn-delete-province" style="width: 100%;">Delete Province</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group align-items-center">
+                  <div class="col-sm-2">
+                    <label for="district-select">District</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <select id="district-select" name="district" class="form-control">
+                      <option disabled selected value>--Select District--</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="row align-items-center">
+                      <div class="col-sm-4">
+                        <button class="btn btn-success" id="btn-add-district" style="width: 100%;">Add District</button>
+                      </div>
+                      <div class="col-sm-4">
+                        <button class="btn btn-warning" id="btn-update-district" style="width: 100%;">Update District</button>
+                      </div>
+                      <div class="col-sm-4">
+                        <button class="btn btn-danger" id="btn-delete-district" style="width: 100%;">Delete District</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group align-items-center">
+                  <div class="col-sm-2">
+                    <label for="ward-select">Ward</label>
+                  </div>
+                  <div class="col-sm-2">
+                    <select id="ward-select" name="ward" class="form-control">
+                      <option disabled selected value>--Select Ward--</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-8">
+                    <div class="row align-items-center">
+                      <div class="col-sm-4">
+                        <button class="btn btn-success" id="btn-add-ward" style="width: 100%;">Add Ward</button>
+                      </div>
+                      <div class="col-sm-4">
+                        <button class="btn btn-warning" id="btn-update-ward" style="width: 100%;">Update Ward</button>
+                      </div>
+                      <div class="col-sm-4">
+                        <button class="btn btn-danger" id="btn-delete-ward" style="width: 100%;">Delete Ward</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- <table class="table table-bordered table-striped table-hover text-center"
+              id="construction-contractor-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Website</th>
+                  <th>Projects</th>
+                  <th>Address</th>
+                  <th>Email</th>
+                  <th>Fax</th>
+                  <th>Phone</th>
+                  <th>Note</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table> -->
+
+            <!-- Province Modal -->
+            <div class="modal fade" id="provinceModal" tabindex="-1" role="dialog" aria-labelledby="provinceModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Tỉnh thành</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row mt-2 align-items-center">
+                      <div class="col-sm-4">
+                        <label class="m-0" for="input-province-name">Tỉnh thành</label>
+                      </div>
+                      <div class="col-sm-8">
+                        <input class="form-control w-100" type="text" id="input-province-name" placeholder="Tỉnh thành">
+                        <p class="text-danger valididate-province-name" style="display: none;">Tên tỉnh thành phải có từ
+                          2 ký tự
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row mt-2 align-items-center">
+                      <div class="col-sm-4">
+                        <label class="m-0" for="input-province-code">Mã</label>
+                      </div>
+                      <div class="col-sm-8">
+                        <input class="form-control w-100" type="text" id="input-province-code" placeholder="Mã">
+                        <p class="text-danger valididate-province-code" style="display: none;">Mã tỉnh thành phải có từ
+                          2 ký tự
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row mt-2 align-items-center">
+                      <div class="offset-4 col-sm-3">
+                        <button type="submit" class="btn btn-primary btn-submit-save-province w-100">Save</button>
+                      </div>
+                      <div class="col-sm-3">
+                        <button class="btn btn-dark w-100 btn-cancel-province" data-dismiss="modal">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- District Modal -->
+            <div class="modal fade" id="districtModal" tabindex="-1" role="dialog" aria-labelledby="districtModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Quận huyện</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row mt-2 align-items-center">
+                      <div class="col-sm-4">
+                        <label class="m-0" for="input-district-name">Tên</label>
+                      </div>
+                      <div class="col-sm-8">
+                        <input class="form-control w-100" type="text" id="input-district-name" placeholder="Tên">
+                        <p class="text-danger valididate-district-name" style="display: none;">Tên tỉnh thành phải có từ
+                          2 ký tự
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row mt-2 align-items-center">
+                      <div class="col-sm-4">
+                        <label class="m-0" for="select-district-prefix">Quận-Huyện</label>
+                      </div>
+                      <div class="col-sm-8">
+                        <select class="form-control w-100" name="district-prefix" id="select-district-prefix"
+                          aria-placeholder="Quận-Huyện">
+                          <option disabled selected value>--Chọn--</option>
+                          <option value="Huyện">Huyện</option>
+                          <option value="Quận">Quận</option>
+                          <option value="Thành phố">Thành phố</option>
+                          <option value="Thị xã">Thị xã</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mt-2 align-items-center">
+                      <div class="col-sm-4">
+                        <label class="m-0" for="select-province-name">Tên TP</label>
+                      </div>
+                      <div class="col-sm-8">
+                        <select class="form-control w-100" name="province-name" id="select-province-name"
+                          aria-placeholder="Tên">
+                          <option disabled selected value>--Chọn--</option>
+                        </select>
+                        <p class="text-danger valididate-district-province" style="display: none;">Vui lòng chọn
+                          tỉnh/thành.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row mt-2 align-items-center">
+                      <div class="offset-4 col-sm-3">
+                        <button class="btn btn-primary btn-submit-add-district w-100">Save</button>
+                      </div>
+                      <div class="col-sm-3">
+                        <button class="btn btn-dark w-100" data-dismiss="modal">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ward Modal -->
+            <div class="modal fade" id="wardModal" tabindex="-1" role="dialog" aria-labelledby="wardModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Phường xã</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row mt-2 align-items-center">
+                      <div class="col-sm-4">
+                        <label class="m-0" for="input-ward-name">Tên</label>
+                      </div>
+                      <div class="col-sm-8">
+                        <input class="form-control w-100" type="text" id="input-ward-name" placeholder="Tên">
+                      </div>
+                    </div>
+                    <div class="row mt-2 align-items-center">
+                      <div class="col-sm-4">
+                        <label class="m-0" for="select-province-name">Phường xã</label>
+                      </div>
+                      <div class="col-sm-8">
+                        <select class="form-control w-100" name="ward-prefix" id="select-ward-prefix">
+                          <option disabled selected value>--Chọn--</option>
+                          <option value="Phường">Phường</option>
+                          <option value="Xã">Xã</option>
+                          <option value="Thị Trấn">Thị Trấn</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mt-2 align-items-center">
+                      <div class="col-sm-4">
+                        <label class="m-0" for="ward-select-province-name">Tỉnh thành</label>
+                      </div>
+                      <div class="col-sm-8">
+                        <select class="form-control w-100" name="ward-province-name"
+                          id="ward-select-province-name"></select>
+                      </div>
+                    </div>
+                    <div class="row mt-2 align-items-center">
+                      <div class="col-sm-4">
+                        <label class="m-0" for="select-district-name">Quận-Huyện</label>
+                      </div>
+                      <div class="col-sm-8">
+                        <select class="form-control w-100" name="district-name" id="select-district-name"></select>
+                      </div>
+                    </div>
+                    <div class="row mt-2 align-items-center">
+                      <div class="offset-4 col-sm-3">
+                        <button class="btn btn-primary btn-submit-add-ward w-100">Save</button>
+                      </div>
+                      <div class="col-sm-3">
+                        <button class="btn btn-dark w-100" data-dismiss="modal">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- confirm delete province modal -->
+            <div class="modal fade" id="confirmDeleteProvinceModal" tabindex="-1" role="dialog"
+              aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h5 class="delete-message text-center">
+                    </h5>
+
+                    <div class="row mt-2 align-items-center">
+                      <div class="offset-4 col-sm-3">
+                        <button class="btn btn-primary btn-confirm-delete-province w-100">Xoá</button>
+                      </div>
+                      <div class="col-sm-3">
+                        <button class="btn btn-dark w-100" data-dismiss="modal">Huỷ</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- confirm delete district modal -->
+            <div class="modal fade" id="confirmDeleteDistrictModal" tabindex="-1" role="dialog"
+              aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h5 class="delete-message text-center">
+                    </h5>
+
+                    <div class="row mt-2 align-items-center">
+                      <div class="offset-4 col-sm-3">
+                        <button class="btn btn-primary btn-confirm-delete-district w-100">Xoá</button>
+                      </div>
+                      <div class="col-sm-3">
+                        <button class="btn btn-dark w-100" data-dismiss="modal">Huỷ</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- confirm delete ward modal -->
+            <div class="modal fade" id="confirmDeleteWardModal" tabindex="-1" role="dialog"
+              aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h5 class="delete-message text-center">
+                    </h5>
+
+                    <div class="row mt-2 align-items-center">
+                      <div class="offset-4 col-sm-3">
+                        <button class="btn btn-primary btn-confirm-delete-ward w-100">Xoá</button>
+                      </div>
+                      <div class="col-sm-3">
+                        <button class="btn btn-dark w-100" data-dismiss="modal">Huỷ</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <%- include('../views/partials/error-modal.ejs') %>
+
+            <!-- success modal -->
+            <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="success-icon">
+                      &#10003; <!-- Tick icon -->
+                    </div>
+                    <h3 class="success-message text-center">
+                      Success
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+        <!-- /.content-wrapper -->
+      </div>
+  </div>
+  <%- include('./partials/footer.ejs') %>
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/dist/js/adminlte.js"></script>
+    <script src="/admin-src/administrative-division.js" type="module" defer></script>
+    <script src="/js/config.js"></script>
+    <script src="/admin-src/left-menu.js"></script>
+</body>
+
+</html>

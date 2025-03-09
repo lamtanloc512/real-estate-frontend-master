@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+  <!-- DataTables -->
+  <link rel="stylesheet" href="/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+  <link rel="stylesheet" href="/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+  <link rel="stylesheet" href="/plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <%- include('./partials/left-menu.ejs', 
+              { activePage: 'user-properties', 
+              pageHeader: 'User Properties' }) %>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      
+      <!-- Main content -->
+      <section class="content pt-5">
+        <div class="container-fluid">
+          <h2 style="text-align: center">User Properties Management</h2>
+          <table class="table table-bordered table-striped table-hover text-center" id="user-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <!-- Modal user properties list-->
+          <div class="modal fade" id="modal-user-properties">
+            <div class="modal-dialog" style="width: 80%; max-width: 80%;">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-info">Property List</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <table class="table table-bordered table-striped table-hover text-center" id="user-properties-table">
+                    <thead>
+                      <tr>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- loading spinner -->
+          <div id="loading-spinner" class="loading-overlay" style="display: none;">
+            <div class="spinner-border text-primary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+      <!-- /.content-wrapper -->
+    </div>
+  </div>
+  <%- include('./partials/footer.ejs') %>
+  <!-- jQuery -->
+  <script src="/plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- DataTables  & Plugins -->
+  <script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="/dist/js/adminlte.js"></script>
+  <script src="/admin-src/user-properties.js" type="module"></script>
+  <script src="/js/config.js"></script>
+  <script src="/admin-src/left-menu.js"></script>
+</body>
+
+</html>

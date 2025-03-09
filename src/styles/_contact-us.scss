@@ -1,0 +1,65 @@
+@use 'variables' as vars;
+
+.contact-us {
+    padding: 4rem 0;
+    background-color: #f8faf9;
+
+    h2 {
+        font-size: 2rem;
+        color: #092c4c;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: #5b6b73;
+        margin-bottom: 2rem;
+    }
+
+    
+
+    .map-container {
+        iframe {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .contact-details {
+        margin-top: 3rem;
+
+        .contact-item {
+            text-align: left;
+
+            i {
+                color: #b7976c;
+                // margin-bottom: 1rem;
+            }
+
+            h4 {
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+                color: #092c4c;
+            }
+
+            p {
+                margin: 0;
+                color: #5b6b73;
+            }
+        }
+    }
+}
+
+.contact-form {
+    .form-control {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        box-shadow: none;
+    }
+
+    .btn {
+        @include vars.hover-button;
+    }
+}

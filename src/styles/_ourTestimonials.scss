@@ -1,0 +1,109 @@
+@use 'variables' as vars;
+#ourTestimonials {
+  background-color: #E9F3FF;
+  padding: 50px 0 150px 0;
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    .testimonials-subtitle {
+      text-transform: uppercase;
+      margin: 0;
+      color: vars.$mainColor;
+  
+      @include vars.text-style-2(1.1rem, 400, 1.7rem);
+    }
+  
+    .testimonials-title {
+      margin: 0;
+      color: #282828;
+      text-align: center;
+      text-transform: capitalize;
+      padding-bottom: 30px;
+  
+      @include vars.text-style-1(2.6rem, 600, 3.2rem);
+    }
+  
+    #ul-bottom-hypers {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      bottom: auto;
+  
+      li {
+        display: inline;
+        color: transparent;
+        text-shadow: 0 0 0 #2c85ec;
+        font-size: 0.5rem;
+        background-color: white;
+        border-radius: 50%;
+  
+        &.active {
+          color: transparent;
+          text-shadow: 0 0 0 #0A74F1;
+          font-size: 0.9rem;
+          background-color: #E9F3FF;
+        }
+      }
+    }
+  
+    /* CSS talk bubble */
+    .talk-bubble {
+      margin-bottom: 10px;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      height: auto;
+      background-color: #FFF;
+  
+      &.round {
+        border-radius: 30px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 30px;
+      }
+  
+      &.tri-right.btm-left:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 30px;
+        right: auto;
+        top: auto;
+        bottom: -20px;
+        border: 22px solid;
+        border-color: transparent transparent transparent #FFF;
+      }
+  
+      /* talk bubble contents */
+      .talktext {
+        padding: 1em;
+        text-align: left;
+        line-height: 1.5em;
+  
+        p {
+          /* remove webkit p margins */
+          -webkit-margin-before: 0em;
+          -webkit-margin-after: 0em;
+
+          margin: 15px ;
+          @include vars.text-style-1(1rem, 400, 1.6rem);
+          color: vars.$slateGray;
+        }
+      }
+    }
+
+    .testimonials-name{
+      color: #000;
+      @include vars.text-style-1(1.1rem, 500, normal);
+    }
+
+    .testimonials-role{
+      color: vars.$slateGray;
+      @include vars.text-style-1(0.8rem, 400, normal);
+    }
+  }
+}

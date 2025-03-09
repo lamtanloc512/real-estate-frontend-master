@@ -1,0 +1,150 @@
+@use 'variables' as vars;
+#popularProperties {
+    padding: 80px 0 50px 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        .property-subtitle {
+            text-transform: uppercase;
+            margin: 0;
+            color: vars.$mainColor;
+
+            @include vars.text-style-2(1.1rem, 400, 1.7rem);
+        }
+
+        .property-title {
+            margin: 0;
+            color: #282828;
+            text-align: center;
+            text-transform: capitalize;
+
+            @include vars.text-style-1(2.6rem, 600, 3.2rem);
+        }
+
+        .property-content {
+            margin: 20px 0 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding-bottom: 30px;
+            width: 100%;
+
+            .property-item {
+                margin: 20px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border: 1px solid #F0F7FF;
+                background: vars.$pureWhite;
+                box-shadow: 0px 2px 3px 0px rgba(66, 66, 66, 0.10);
+                gap: 10px;
+                flex-basis: 30%;
+                padding: 0 0 20px 0;
+
+                .property-item-image {
+                    margin: 0;
+                    display: flex;
+                    position: relative;
+                    width: 100%;
+                    @include vars.hover-image-link;
+
+                    & a {
+                        width: 100%;
+                        text-decoration: none;
+
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    div {
+                        text-transform: uppercase;
+                        position: absolute;
+                        top: 10px;
+                        right: 0;
+                        background-color: vars.$mainColor;
+                        @include vars.text-style-1(0.8rem, 500, 1.3rem);
+                        color: vars.$pureWhite;
+                        padding: 5px 10px;
+                    }
+                }
+
+                i {
+                    color: vars.$slateGray;
+                    font-size: 0.8rem;
+                    margin-right: 8px;
+                }
+
+                p {
+                    padding-left: 30px;
+                    color: vars.$slateGray;
+                    margin: 0;
+                    @include vars.text-style-1(0.8rem, 400, 1.3rem);
+                }
+
+                &.active{
+                    .property-item-price{
+                        position: relative;
+                    }
+                    .property-item-price::after{
+                        content: '';
+                        width: 70px;
+                        height: 2px;
+                        background: vars.$mainColor;
+                        position: absolute;
+                        left: 30px;
+                        bottom: 0;
+                    }
+                    .property-item-price, .property-item-place, .owner-name{
+                        color: vars.$mainColor;
+                    }
+                }
+
+                .property-item-price {
+                    padding-left: 30px;
+                    color: vars.$secondaryColor;
+                    @include vars.text-style-1(1.2rem, 500, 2rem);
+                }
+
+                .property-item-place {
+                    margin: 0;
+                    padding-left: 30px;
+                    color: vars.$secondaryColor;
+                    @include vars.text-style-1(1.1rem, 500, 2rem);
+                }
+
+                .property-owner {
+                    padding-left: 30px;
+
+                    .owner-name {
+                        @include vars.text-style-1(1rem, 400, normal);
+                    }
+                }
+            }
+        }
+
+        .carousel-indicators {
+            position: static;
+
+            #ul-bottom-hypers {
+                li {
+                    display: inline;
+                    color: transparent;
+                    text-shadow: 0 0 0 #E6E6E6;
+
+                    &.active {
+                        color: transparent;
+                        text-shadow: 0 0 0 #0A74F1;
+                    }
+                }                
+            }
+        }
+    }
+}

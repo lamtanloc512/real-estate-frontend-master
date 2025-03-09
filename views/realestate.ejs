@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script src="/src/js/headerHandler.js" type="module" defer></script>
+  <script src="/src/js/homeHandler.js" defer></script>
+  <script src="/js/config.js"></script>
+  <title>
+    <%= title %>
+  </title>
+</head>
+
+<body>
+
+  <%- include('./partials/header.ejs') %>
+
+    <section class="home-section">
+      <div class="container">
+        <section class="hero-section d-flex align-items-center">
+          <div class="row">
+            <div class="heading-and-paragraph col-lg-7 col-md-12 col-sm-12">
+              <h1>Discover A Place you'll love to live</h1>
+              <p>Homie is a real estate soluation that gives you the local scoop about homes.
+                <br>Search confidently with your trusted source of homes for sale or rent.
+              </p>
+              <button class="px-5 py-3" id="btn-contact-us">Contact Us</button>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12">
+              <img alt="todd-kent" src="/images/header/7865447ba74012c706086288c5231690.jpeg">
+            </div>
+          </div>
+        </section>
+        <!-- <div class="customer-rating d-flex justify-content-between">
+          <span>Customer Rating</span>
+          <span>
+            <b>4.9</b>
+            <span class="text-warning">&#9733;</span>
+          </span>
+        </div> -->
+      </div>
+
+      <div class="container d-flex flex-column filter-container my-5 py-5">
+        <div class="d-flex flex-column filter-main">
+          <ul class="nav nav-tabs filter-menu m-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Buy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sell</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rent</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Co-Living</a>
+            </li> -->
+          </ul>
+          <button class="filter-icon p-0" id="filterIcon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 22V11" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M19 7V2" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M12 22V17" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M12 13V2" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M5 22V11" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M5 7V2" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M3 11H7" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M17 11H21" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path d="M10 13H14" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="filter-section">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-3 col-lg-3 mb-3 col-location">
+                <div class="row">
+                  <div class="col-2">
+                    <i class="fas fa-street-view"></i>
+                  </div>
+                  <div class="col-10">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" id="location" class="form-control p-0" placeholder="Choose Location">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col-md-3 col-lg-3 mb-3 col-propertyType">
+                <div class="row">
+                  <div class="col-2">
+                    <i class="fas fa-home"></i>
+                  </div>
+                  <div class="col-10">
+                    <label for="propertyType" class="form-label">Property Type</label>
+                    <select id="propertyType" class="form-select p-0">
+                      <option selected>Duplex House</option>
+                      <option>Apartment</option>
+                      <option>Villa</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-2 col-lg-2 mb-3 col-priceRange">
+                <div class="row">
+                  <div class="col-2">
+                    <i class="fas fa-funnel-dollar"></i>
+                  </div>
+                  <div class="col-10">
+                    <label for="priceRange" class="form-label">Price Range</label>
+                    <select id="priceRange" class="form-select p-0">
+                      <option selected>1500 USD</option>
+                      <option>1600 USD</option>
+                      <option>1700 USD</option>
+                      <option>1800 USD</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-lg-4 mb-3 col-propertySize">
+                <div class="row">
+                  <div class="col-1">
+                    <i class="fas fa-vector-square"></i>
+                  </div>
+                  <div class="col-9">
+                    <label for="propertySize" class="form-label">Property Size</label>
+                    <select id="propertySize" class="form-select p-0">
+                      <option selected>2500 Sqft</option>
+                      <option>2600 Sqft</option>
+                      <option>2700 Sqft</option>
+                      <option>2800 Sqft</option>
+                    </select>
+                  </div>
+                  <div class="col-1">
+                    <button class="search-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path
+                          d="M34.5167 32.15L28.85 26.5C30.6783 24.1708 31.6704 21.2944 31.6667 18.3333C31.6667 15.6962 30.8847 13.1184 29.4196 10.9257C27.9545 8.73307 25.8721 7.02411 23.4358 6.01494C20.9994 5.00577 18.3185 4.74173 15.7321 5.2562C13.1457 5.77067 10.7699 7.04054 8.90525 8.90524C7.04055 10.7699 5.77067 13.1457 5.2562 15.7321C4.74173 18.3185 5.00578 20.9994 6.01495 23.4358C7.02411 25.8721 8.73308 27.9545 10.9257 29.4196C13.1184 30.8847 15.6963 31.6667 18.3333 31.6667C21.2944 31.6703 24.1708 30.6783 26.5 28.85L32.15 34.5167C32.3049 34.6729 32.4893 34.7969 32.6924 34.8815C32.8955 34.9661 33.1133 35.0097 33.3333 35.0097C33.5534 35.0097 33.7712 34.9661 33.9743 34.8815C34.1774 34.7969 34.3617 34.6729 34.5167 34.5167C34.6729 34.3617 34.7969 34.1774 34.8815 33.9743C34.9661 33.7712 35.0097 33.5534 35.0097 33.3333C35.0097 33.1133 34.9661 32.8955 34.8815 32.6924C34.7969 32.4893 34.6729 32.3049 34.5167 32.15ZM8.33334 18.3333C8.33334 16.3555 8.91983 14.4221 10.0186 12.7776C11.1175 11.1331 12.6792 9.85141 14.5065 9.09454C16.3338 8.33766 18.3444 8.13963 20.2842 8.52548C22.2241 8.91133 24.0059 9.86374 25.4044 11.2623C26.8029 12.6608 27.7553 14.4426 28.1412 16.3824C28.527 18.3222 28.329 20.3329 27.5721 22.1602C26.8153 23.9874 25.5335 25.5492 23.889 26.648C22.2446 27.7468 20.3112 28.3333 18.3333 28.3333C15.6812 28.3333 13.1376 27.2798 11.2623 25.4044C9.38691 23.529 8.33334 20.9855 8.33334 18.3333Z"
+                          fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 row-advance">
+              <div class="col-md-3 col-lg-3 mb-3 col-bedrooms">
+                <div class="row">
+                  <div class="col-2">
+                    <i class="fas fa-bed"></i>
+                  </div>
+                  <div class="col-10">
+                    <label for="bedrooms" class="form-label">Bedrooms</label>
+                    <select id="bedrooms" class="form-select p-0">
+                      <option selected>1 Bedrooms</option>
+                      <option>2 Bedrooms</option>
+                      <option>3 Bedrooms</option>
+                      <option>4 Bedrooms</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-lg-3 mb-3 col-bathrooms">
+                <div class="row">
+                  <div class="col-2">
+                    <i class="fas fa-bath"></i>
+                  </div>
+                  <div class="col-10">
+                    <label for="bathrooms" class="form-label">Bathrooms</label>
+                    <select id="bathrooms" class="form-select p-0">
+                      <option selected>1 Bathrooms</option>
+                      <option>2 Bathrooms</option>
+                      <option>3 Bathrooms</option>
+                      <option>4 Bathrooms</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-2 col-lg-2 mb-3 col-garages">
+                <div class="row">
+                  <div class="col-2">
+                    <i class="fas fa-parking"></i>
+                  </div>
+                  <div class="col-10">
+                    <label for="garage" class="form-label">Garage</label>
+                    <select id="garage" class="form-select p-0">
+                      <option selected>2 Garage</option>
+                      <option>1 Garage</option>
+                      <option>3 Garage</option>
+                      <option>4 Garage</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-lg-4 d-flex align-items-center pb-3">
+                <button type="submit" class="btn btn-search" id="btnSearch">Search Properties</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- *************** about us **************** -->
+    <section id="about-us" class="my-5 py-5">
+      <div class="container">
+        <figure class="col-lg-4 col-md-12 col-sm-12 about-banner">
+          <img alt="your-image-here" src="/images/aboutUs/Your Images Here.png">
+        </figure>
+        <div class="col-lg-8 col-md-12 col-sm-12 about-content">
+          <p class="about-subtitle m-0">About Us</p>
+          <p class="about-title">We're on a Mission to Change
+            View of RealEstate Field.</p>
+          <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit ux sed eiusmod tempor
+            incididunt ut labore et dolore.enim admix minim veniam quis nostrud.</p>
+          <ul class="about-list">
+            <li class="about-item">
+              <img alt="house-outline" src="/images/aboutUs/house-Traced.png">
+              <h5 class="about-item-title m-0">Modern Villa</h5>
+              <p class="about-item-text">When unknown printer took galley
+                of type and scrambled.</p>
+            </li>
+            <li class="about-item">
+              <img alt="money-outline" src="/images/aboutUs/money-Traced.png">
+              <h5 class="about-item-title m-0">Secure Payment</h5>
+              <p class="about-item-text">When unknown printer took galley
+                of type and scrambled.</p>
+            </li>
+          </ul>
+          <a class="learn-more-link" href="#">
+            <img alt="line" src="/images/Line.jpg">
+            <span>Learn More</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- *************** our main focus **************** -->
+    <section id="services">
+      <div class="container">
+        <p class="service-subtitle">Our Services</p>
+        <p class="service-title">Our Main Focus</p>
+        <div class="service-content">
+          <div class="service-item active">
+            <div class="card-icon">
+              <img alt="service-1" src="/images/services/Icon.png">
+            </div>
+            <a href="#" class="service-item-title">
+              Buy a home
+            </a>
+            <p class="service-item-text">over 1 million+ homes for sale available on
+              the website, we can match you with a house
+              you will want to call home.</p>
+            <a href="#" class="service-item-link">Find A Home<img alt="line" src="/images/Line.jpg"></a>
+          </div>
+
+          <div class="service-item">
+            <div class="card-icon">
+              <img alt="service-2" src="/images/services/Icon (1).png">
+            </div>
+            <a href="#" class="service-item-title">
+              Rent a home
+            </a>
+            <p class="service-item-text">over 1 million+ homes for sale available on
+              the website, we can match you with a house
+              you will want to call home.</p>
+            <a href="#" class="service-item-link">Find A Home<img alt="lineGray" src="/images/LineGray.png"></a>
+          </div>
+
+          <div class="service-item">
+            <div class="card-icon">
+              <img alt="service-3" src="/images/services/Icon (2).png">
+            </div>
+            <a href="#" class="service-item-title">
+              Sell a home
+            </a>
+            <p class="service-item-text">over 1 million+ homes for sale available on
+              the website, we can match you with a house
+              you will want to call home.</p>
+            <a href="#" class="service-item-link">Find A Home<img alt="lineGray" src="/images/LineGray.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="sum-number-services-focus">
+        <div class="container">
+          <ul class="service-list">
+            <li class="service-focus-item">
+              <img alt="excavator-outline" src="/images/services/excavator (Traced).png">
+              <h2 class="service-item-number m-0">260+</h2>
+              <p class="service-focus-text">Total Construction</p>
+            </li>
+            <li class="service-focus-item">
+              <img alt="interior-design-outline" src="/images/services/interior-design (Traced).png">
+              <h2 class="service-item-number m-0">110+</h2>
+              <p class="service-focus-text">Apartio Rooms</p>
+            </li>
+            <li class="service-focus-item">
+              <img alt="office-outline" src="/images/services/office (Traced).png">
+              <h2 class="service-item-number m-0">190+</h2>
+              <p class="service-focus-text">Apartments Sold</p>
+            </li>
+            <li class="service-focus-item">
+              <img alt="map-outline" src="/images/services/map-outline.png">
+              <h2 class="service-item-number m-0">560+</h2>
+              <p class="service-focus-text">Total Area Sq</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- *************** our growing agents *************** -->
+    <section id="growing-agents">
+      <div class="container">
+        <p class="growing-subtitle">Expertise is here</p>
+        <p class="growing-title">Our Growing Agents</p>
+        <div class="growing-content">
+          <div class="growing-item">
+            <div class="card-icon">
+              <img alt="person-1" src="/images/growingAgents/Mask group.png">
+              <div>3 Years Experience</div>
+            </div>
+            <a href="#" class="growing-person-name">
+              David Wing
+            </a>
+            <p class="growing-item-text">Eco Builders</p>
+            <p class="growing-item-contact"><img alt="call" src="/images/growingAgents/Call.png"><span>Call: +1 234 567 890</span></p>
+          </div>
+
+          <div class="growing-item active">
+            <div class="card-icon">
+              <img alt="person-2" src="/images/growingAgents/Mask group (1).png">
+              <div>4 Years Experience</div>
+            </div>
+            <a href="#" class="growing-person-name">
+              Mike Hue
+            </a>
+            <p class="growing-item-text">Architect Design</p>
+            <p class="growing-item-contact"><img alt="call" src="/images/growingAgents/Call.png"><span>Call: +1 234 567 890</span></p>
+          </div>
+
+          <div class="growing-item">
+            <div class="card-icon">
+              <img alt="person-3" src="/images/growingAgents/Mask group (2).png">
+              <div>3 Years Experience</div>
+            </div>
+            <a href="#" class="growing-person-name">
+              Ela Steven
+            </a>
+            <p class="growing-item-text">Interior Design</p>
+            <p class="growing-item-contact"><img alt="call" src="/images/growingAgents/Call.png"><span>Call: +1 234 567 890</span></p>
+          </div>
+
+          <div class="growing-item">
+            <div class="card-icon">
+              <img alt="person-4" src="/images/growingAgents/Mask group (3).png">
+              <div>5 Years Experience</div>
+            </div>
+            <a href="#" class="growing-person-name">
+              Billi Butcher
+            </a>
+            <p class="growing-item-text">Sweet Home</p>
+            <p class="growing-item-contact"><img alt="call" src="/images/growingAgents/Call.png"><span>Call: +1 234 567 890</span></p>
+          </div>
+        </div>
+        <div class="become-agent">
+          <div class="become-agent-group">
+            <img alt="agent-group" src="/images/growingAgents/Group 493.png">
+            <div>
+              <h3>Become an Agent</h3>
+              <p>Agent hen an unknown printer took a galley scramble</p>
+            </div>
+          </div>
+          <button>Join Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- *************** featured listings **************** -->
+    <section id="features">
+      <div class="container">
+        <p class="feature-subtitle">Featured Listing</p>
+        <p class="feature-title">We Bring Dream Homes To Reality</p>
+        <div class="feature-content">
+          <div class="feature-item">
+            <figure class="feature-item-image">
+              <a href="#"><img alt="link-property-1" src="/images/featureListing/modern-dining-room-living-room-with-luxury-decor.png"></a>
+              <div>For Sale</div>
+            </figure>
+            <h4 class="feature-item-title m-0">1963 S Crescent Heights Blvd</h4>
+            <p><i class="fas fa-map-marker-alt"></i><span>Hills, CA 90210</span></p>
+            <div class="feature-item-detail">
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-th-large"></i><span>2400 Square Feet</span></p>
+                  <p><i class="fas fa-bed"></i><span>20 Bedrooms</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="fas fa-car"></i><span>2 Garages</span></p>
+                  <p><i class="fas fa-bath"></i><span>8 Bathrooms</span></p>
+                </div>
+              </div>
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-user"></i><span>Michel Smith</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="far fa-clock"></i><span>1 days ago</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="total-price">$5,304,000</div>
+          </div>
+
+          <div class="feature-item">
+            <figure class="feature-item-image">
+              <a href="#"><img alt="link-property-2" src="/images/featureListing/3d-rendering-loft-luxury-living-room-with-shelf-near-dining-table (1).png"></a>
+              <div>For Rent</div>
+            </figure>
+            <h4 class="feature-item-title m-0">302 North Plam Drive</h4>
+            <p><i class="fas fa-map-marker-alt"></i><span>Beverly Hills, CA 90210</span></p>
+            <div class="feature-item-detail">
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-th-large"></i><span>2300 Square Feet</span></p>
+                  <p><i class="fas fa-bed"></i><span>20 Bedrooms</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="fas fa-car"></i><span>3 Garages</span></p>
+                  <p><i class="fas fa-bath"></i><span>10 Bathrooms</span></p>
+                </div>
+              </div>
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-user"></i><span>Adam Smith</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="far fa-clock"></i><span>5 days ago</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="total-price">$5,142,000</div>
+          </div>
+
+          <div class="feature-item">
+            <figure class="feature-item-image">
+              <a href="#"><img alt="link-property-3" src="/images/featureListing/3d-rendering-modern-dining-room-living-room-with-luxury-decor.png"></a>
+              <div>For Sale</div>
+            </figure>
+            <h4 class="feature-item-title m-0">28 Quaker Road, Manhasset</h4>
+            <p><i class="fas fa-map-marker-alt"></i><span>California Hills, CA 90210</span></p>
+            <div class="feature-item-detail">
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-th-large"></i><span>2020 Square Feet</span></p>
+                  <p><i class="fas fa-bed"></i><span>22 Bedrooms</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="fas fa-car"></i><span>2 Garages</span></p>
+                  <p><i class="fas fa-bath"></i><span>11 Bathrooms</span></p>
+                </div>
+              </div>
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-user"></i><span>Michel Smith</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="far fa-clock"></i><span>1 days ago</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="total-price">$4,784,000</div>
+          </div>
+
+          <div class="feature-item">
+            <figure class="feature-item-image">
+              <a href="#"><img alt="link-property-4" src="/images/featureListing/3d-rendering-loft-luxury-living-room-with-shelf-near-dining-table.png"></a>
+              <div>For Sale</div>
+            </figure>
+            <h4 class="feature-item-title m-0">Sofi Berryessa 750 King Road</h4>
+            <p><i class="fas fa-map-marker-alt"></i><span>Los Angel, CA 90210</span></p>
+            <div class="feature-item-detail">
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-th-large"></i><span>2350 Square Feet</span></p>
+                  <p><i class="fas fa-bed"></i><span>19 Bedrooms</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="fas fa-car"></i><span>4 Garages</span></p>
+                  <p><i class="fas fa-bath"></i><span>10 Bathrooms</span></p>
+                </div>
+              </div>
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-user"></i><span>Lee Hue</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="far fa-clock"></i><span>5 days ago</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="total-price">$3,534,000</div>
+          </div>
+
+          <div class="feature-item">
+            <figure class="feature-item-image">
+              <a href="#"><img alt="link-property-5" src="/images/featureListing/interior-with-bid-dining-room-modern-private-house.png"></a>
+              <div>For Rent</div>
+            </figure>
+            <h4 class="feature-item-title m-0">1203 Orren Street, Northeast</h4>
+            <p><i class="fas fa-map-marker-alt"></i><span>Louisiana, CA 90210</span></p>
+            <div class="feature-item-detail">
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-th-large"></i><span>1800 Square Feet</span></p>
+                  <p><i class="fas fa-bed"></i><span>16 Bedrooms</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="fas fa-car"></i><span>2 Garages</span></p>
+                  <p><i class="fas fa-bath"></i><span>7 Bathrooms</span></p>
+                </div>
+              </div>
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-user"></i><span>Tom Steven</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="far fa-clock"></i><span>6 days ago</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="total-price">$3,142,000</div>
+          </div>
+
+          <div class="feature-item">
+            <figure class="feature-item-image">
+              <a href="#"><img alt="link-property-6" src="/images/featureListing/living-room-modern-apartment-with-two-identical-sofas-opposite-each-other.png"></a>
+              <div>For Sale</div>
+            </figure>
+            <h4 class="feature-item-title m-0">28 Ridge Road, Manhasset</h4>
+            <p><i class="fas fa-map-marker-alt"></i><span>Claremont, CA 90210</span></p>
+            <div class="feature-item-detail">
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-th-large"></i><span>2020 Square Feet</span></p>
+                  <p><i class="fas fa-bed"></i><span>20 Bedrooms</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="fas fa-car"></i><span>3 Garages</span></p>
+                  <p><i class="fas fa-bath"></i><span>11 Bathrooms</span></p>
+                </div>
+              </div>
+              <div class="row m-0">
+                <div class="col-6">
+                  <p><i class="fas fa-user"></i><span>David Jhonson</span></p>
+                </div>
+                <div class="col-6">
+                  <p><i class="far fa-clock"></i><span>7 days ago</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="total-price">$2,384,000</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- *************** our testimonials *************** -->
+    <section id="ourTestimonials">
+      <div class="container mt-5">
+        <p class="testimonials-subtitle">Our Testimonials</p>
+        <p class="testimonials-title">What Our Customers Says</p>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="row">
+              <div class="col-md-4 d-flex flex-column align-items-start">
+                <div class="talk-bubble tri-right round btm-left">
+                  <div class="talktext">
+                    <p>I could probably go into sales for you. I
+                      am completely blown away. After
+                      using SEO my business skyrocketed!
+                      The very best.</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <img alt="Grace Hall" class="rounded-circle me-4" src="/images/testimonial/Avatar.png">
+                  <div class="d-flex flex-column align-items-start">
+                    <h5 class="testimonials-name">Grace Hall</h5>
+                    <p class="mb-0 testimonials-role">Customer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex flex-column align-items-start">
+                <div class="talk-bubble tri-right round btm-left">
+                  <div class="talktext">
+                    <p>I received very good care at Clinicity
+                      Clinic, and the doctor took the time
+                      to explain the medications he was
+                      prescribing and why.</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <img alt="Connor Walker" class="rounded-circle me-4" src="/images/testimonial/Ellipse 54.png">
+                  <div class="d-flex flex-column align-items-start">
+                    <h5 class="testimonials-name">Connor Walker</h5>
+                    <p class="mb-0 testimonials-role">Customer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex flex-column align-items-start">
+                <div class="talk-bubble tri-right round btm-left">
+                  <div class="talktext">
+                    <p>I have insurance and still go to this
+                      clinic. The cost is in line with my copy
+                      to do and I don’t need to make an
+                      appointment.</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                  <img alt="Kira Wood" class="rounded-circle me-4" src="/images/testimonial/Ellipse 55.png">
+                  <div class="d-flex flex-column align-items-start">
+                    <h5 class="testimonials-name">Kira Wood</h5>
+                    <p class="mb-0 testimonials-role">Customer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Indicators -->
+          <ol id="ul-bottom-hypers" class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active">&#11093;</li>
+            <li data-target="#myCarousel" data-slide-to="1">&#11093;</li>
+            <li data-target="#myCarousel" data-slide-to="2">&#11093;</li>
+            <li data-target="#myCarousel" data-slide-to="3">&#11093;</li>
+            <li data-target="#myCarousel" data-slide-to="4">&#11093;</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- *************** popular properties **************** -->
+    <section id="popularProperties">
+      <div class="container">
+        <p class="property-subtitle">Properties</p>
+        <p class="property-title">our Popular properties</p>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+
+              <div class="property-content row">
+                <div class="property-item active col-md-4">
+                  <figure class="property-item-image">
+                    <a href="#"><img alt="popular-property-1" src="/images/popularProperties/pexels-curtis-adams-7027791.png"></a>
+                    <div>Singapore</div>
+                  </figure>
+                  <h4 class="property-item-price m-0">$300,000</h4>
+                  <p>5232 North Carolina Ave. 21BC</p>
+                  <h4 class="property-item-place">California, USA</h4>
+                  <div class="row m-0">
+                    <div class="col-4 px-0">
+                      <p><i class="fas fa-bed"></i><span>4 beds</span></p>
+                    </div>
+                    <div class="col-4 px-0">
+                      <p><i class="fas fa-bath"></i><span>3 baths</span></p>
+                    </div>
+                  </div>
+                  <div class="property-owner d-flex align-items-center mt-3">
+                    <img alt="William Hue" class="rounded-circle me-4" src="/images/popularProperties/Ellipse 54 2.png">
+                    <div class="d-flex flex-column align-items-start">
+                      <h5 class="owner-name">William Hue</h5>
+                      <p class="mb-0 owner-role p-0">Estate Agents</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="property-item col-md-4">
+                  <figure class="property-item-image">
+                    <a href="#"><img alt="popular-property-2" src="/images/popularProperties/pexels-curtis-adams-7168074.png"></a>
+                    <div>LOS Angels</div>
+                  </figure>
+                  <h4 class="property-item-price m-0">$350,000</h4>
+                  <p>5232 North Carolina Ave. 21BC</p>
+                  <h4 class="property-item-place">Los Angels, USA</h4>
+                  <div class="row m-0">
+                    <div class="col-4 px-0">
+                      <p><i class="fas fa-bed"></i><span>5 beds</span></p>
+                    </div>
+                    <div class="col-4 px-0">
+                      <p><i class="fas fa-bath"></i><span>3 baths</span></p>
+                    </div>
+                  </div>
+                  <div class="property-owner d-flex align-items-center mt-3">
+                    <img alt="Adam Smith" class="rounded-circle me-4" src="/images/popularProperties/Ellipse 54 3.png">
+                    <div class="d-flex flex-column align-items-start">
+                      <h5 class="owner-name">Adam Smith</h5>
+                      <p class="mb-0 owner-role p-0">Estate Agents</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="property-item col-md-4">
+                  <figure class="property-item-image">
+                    <a href="#"><img alt="popular-property-3" src="/images/popularProperties/pexels-barion-mcqueen-5002332.png"></a>
+                    <div>CALIFORNIA</div>
+                  </figure>
+                  <h4 class="property-item-price m-0">$500,000</h4>
+                  <p>5232 North Carolina Ave. 21BC</p>
+                  <h4 class="property-item-place">Houston, USA</h4>
+                  <div class="row m-0">
+                    <div class="col-4 px-0">
+                      <p><i class="fas fa-bed"></i><span>6 beds</span></p>
+                    </div>
+                    <div class="col-4 px-0">
+                      <p><i class="fas fa-bath"></i><span>4 baths</span></p>
+                    </div>
+                  </div>
+                  <div class="property-owner d-flex align-items-center mt-3">
+                    <img alt="Butcher Bos" class="rounded-circle me-4" src="/images/popularProperties/Ellipse 54 (1).png">
+                    <div class="d-flex flex-column align-items-start">
+                      <h5 class="owner-name">Butcher Bos</h5>
+                      <p class="mb-0 owner-role p-0">Estate Agents</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <ol id="ul-bottom-hypers">
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1">&#9899;</li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">&#9899;</li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">&#9899;
+              </li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- *************** our partner *************** -->
+    <section id="ourPartner">
+      <div class="container">
+        <img alt="hexalogo" src="/images/partners/Hexa Logo.png">
+        <img alt="techlogo" src="/images/partners/Tech Logo.png">
+        <img alt="realEstate1" src="/images/partners/Real Estate Logo.png">
+        <img alt="realEstate2" src="/images/partners/Real Estate Logo (1).png">
+        <img alt="realEstate3" src="/images/partners/Real Estate Logo (2).png">
+      </div>
+    </section>
+
+    <!-- *************** our facilities *************** -->
+    <section id="ourFacilities">
+      <div class="container">
+        <div class="row m-0">
+          <figure class="col-lg-6 col-sm-12 col-md-12 facility-banner">
+            <img alt="mask-group" src="/images/facilities/Mask group (4).png">
+          </figure>
+          <div class="col-lg-6 col-sm-12 col-md-12 facility-content">
+            <p class="facility-subtitle m-0">Our facilities</p>
+            <p class="facility-title">The experts in local and
+              international property</p>
+            <p class="facility-text">Agent hen an unknown printer took a galley of type and scramble
+              d it to make a type specimen book. It has survived not only five
+              centuries, but also the leap into electronic.</p>
+            <ul class="facility-list">
+              <li class="facility-item">
+                <i class="fas fa-check"></i>
+                <span class="facility-item-text">Parking Space</span>
+              </li>
+              <li class="facility-item">
+                <i class="fas fa-check"></i>
+                <span class="facility-item-text">Medical Center</span>
+              </li>
+              <li class="facility-item">
+                <i class="fas fa-check"></i>
+                <span class="facility-item-text">Swimming Pool</span>
+              </li>
+              <li class="facility-item">
+                <i class="fas fa-check"></i>
+                <span class="facility-item-text">Kids Playland</span>
+              </li>
+              <li class="facility-item">
+                <i class="fas fa-check"></i>
+                <span class="facility-item-text">Private Security</span>
+              </li>
+              <li class="facility-item">
+                <i class="fas fa-check"></i>
+                <span class="facility-item-text">Library Area</span>
+              </li>
+            </ul>
+            <a class="read-more-link" href="#">
+              <img alt="line" src="/images/Line.jpg">
+              <span>Read More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- *************** new feeds **************** -->
+    <section id="new-feeds">
+      <div class="container">
+        <p class="feeds-subtitle">News and Blogs</p>
+        <p class="feeds-title">Leatest News Feeds</p>
+        <div class="feeds-content">
+          <div class="feeds-item">
+            <figure class="feeds-image">
+              <a href="#"><img alt="figure-blog-1" src="/images/feeds/Mask group 5.png"></a>
+            </figure>
+            <ul class="feeds-by">
+              <li class="feeds-li-item">
+                <i class="fas fa-user"></i><span>William Seklo</span>
+              </li>
+              <li class="feeds-li-item">
+                <i class="fas fa-tags"></i><span>Apartment</span>
+              </li>
+            </ul>
+            <h3 class="feeds-item-title">New Apartment Nice in the
+              Best Canadian Cities</h3>
+            <ul class="feeds-readmore">
+              <li class="feeds-li-item">
+                <i class="far fa-calendar"></i>
+                <span>July 10, 2022</span>
+              </li>
+              <li class="feeds-li-item d-flex justify-content-end">READ MORE</li>
+            </ul>
+          </div>
+
+          <div class="feeds-item">
+            <figure class="feeds-image">
+              <a href="#"><img alt="figure-blog-2" src="/images/feeds/Mask group 7.png"></a>
+            </figure>
+            <ul class="feeds-by">
+              <li class="feeds-li-item">
+                <i class="fas fa-user"></i><span>Michel Seklo</span>
+              </li>
+              <li class="feeds-li-item">
+                <i class="fas fa-tags"></i><span>Apartment</span>
+              </li>
+            </ul>
+            <h3 class="feeds-item-title">Diamond Manor Apartment
+              in the New York</h3>
+            <ul class="feeds-readmore">
+              <li class="feeds-li-item">
+                <i class="far fa-calendar"></i>
+                <span>July 13, 2022</span>
+              </li>
+              <li class="feeds-li-item d-flex justify-content-end">READ MORE</li>
+            </ul>
+          </div>
+
+          <div class="feeds-item">
+            <figure class="feeds-image">
+              <a href="#"><img alt="figure-blog-3" src="/images/feeds/pexels-barion-mcqueen-5002332 1.png"></a>
+            </figure>
+            <ul class="feeds-by">
+              <li class="feeds-li-item">
+                <i class="fas fa-user"></i><span>Adam Smith</span>
+              </li>
+              <li class="feeds-li-item">
+                <i class="fas fa-tags"></i><span>Apartment</span>
+              </li>
+            </ul>
+            <h3 class="feeds-item-title">Unveils the Best Canadian
+              Cities for Biking</h3>
+            <ul class="feeds-readmore">
+              <li class="feeds-li-item">
+                <i class="far fa-calendar"></i>
+                <span>July 15, 2022</span>
+              </li>
+              <li class="feeds-li-item d-flex justify-content-end">READ MORE</li>
+            </ul>
+          </div>
+
+          <div class="feeds-item">
+            <figure class="feeds-image">
+              <a href="#"><img alt="figure-blog-4" src="/images/feeds/pexels-curtis-adams-7168071.png"></a>
+            </figure>
+            <ul class="feeds-by">
+              <li class="feeds-li-item">
+                <i class="fas fa-user"></i><span>William Seklo</span>
+              </li>
+              <li class="feeds-li-item">
+                <i class="fas fa-tags"></i><span>Apartment</span>
+              </li>
+            </ul>
+            <h3 class="feeds-item-title">New Apartment Nice in the
+              Best Canadian Cities</h3>
+            <ul class="feeds-readmore">
+              <li class="feeds-li-item">
+                <i class="far fa-calendar"></i>
+                <span>July 10, 2022</span>
+              </li>
+              <li class="feeds-li-item d-flex justify-content-end">READ MORE</li>
+            </ul>
+          </div>
+
+          <div class="feeds-item">
+            <figure class="feeds-image">
+              <a href="#"><img alt="figure-blog-5" src="/images/feeds/pexels-curtis-adams-7168074 1.png"></a>
+            </figure>
+            <ul class="feeds-by">
+              <li class="feeds-li-item">
+                <i class="fas fa-user"></i><span>Michel Seklo</span>
+              </li>
+              <li class="feeds-li-item">
+                <i class="fas fa-tags"></i><span>Apartment</span>
+              </li>
+            </ul>
+            <h3 class="feeds-item-title">Diamond Manor Apartment
+              in the New York</h3>
+            <ul class="feeds-readmore">
+              <li class="feeds-li-item">
+                <i class="far fa-calendar"></i>
+                <span>July 13, 2022</span>
+              </li>
+              <li class="feeds-li-item d-flex justify-content-end">READ MORE</li>
+            </ul>
+          </div>
+
+          <div class="feeds-item">
+            <figure class="feeds-image">
+              <a href="#"><img alt="figure-blog-6" src="/images/feeds/Mask group 6.png"></a>
+            </figure>
+            <ul class="feeds-by">
+              <li class="feeds-li-item">
+                <i class="fas fa-user"></i><span>Adam Smith</span>
+              </li>
+              <li class="feeds-li-item">
+                <i class="fas fa-tags"></i><span>Apartment</span>
+              </li>
+            </ul>
+            <h3 class="feeds-item-title">Unveils the Best Canadian
+              Cities for Biking</h3>
+            <ul class="feeds-readmore">
+              <li class="feeds-li-item">
+                <i class="far fa-calendar"></i>
+                <span>July 15, 2022</span>
+              </li>
+              <li class="feeds-li-item d-flex justify-content-end">READ MORE</li>
+            </ul>
+          </div>
+        </div>
+        <button id="btnViewAll"><span>View All</span><i class="fas fa-arrow-right"></i></button>
+      </div>
+    </section>
+
+    <!-- *************** footer **************** -->
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+// @import 'variables';
+@use 'variables' as vars;
+
+/* ---------------- our facilities ---------------- */
+#ourFacilities{
+    padding: 100px 0 100px 0;
+    background-color: vars.$pureWhite;
+    .container .row{
+        align-items: center;
+
+        .facility-banner {
+            margin: 0;
+            img{
+                width: 100%;
+            }
+        }
+
+        .facility-content{
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .facility-subtitle{
+                text-transform: uppercase;
+                color: vars.$mainColor;
+                @include vars.text-style-2(1.1rem, 400, 1.7rem);
+            }
+
+            .facility-title{
+                text-transform: capitalize;
+                margin: 0;
+                color: vars.$secondaryColor;
+                @include vars.text-style-1(2.8rem, 600, 3.5rem);
+            }
+
+            .facility-text{
+                margin: 0;
+                width: 90%;
+                color: vars.$slateGray;
+                @include vars.text-style-2(1rem, 400, 1.6rem);
+            }
+
+            .facility-list{
+                width: 90%;
+                list-style: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin: 0;
+                padding: 0;
+
+                .facility-item{
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    i{
+                        color: vars.$mainColor;
+                        font-size: 1rem;
+                    }
+
+                    & span{
+                        color: vars.$slateGray;
+                        @include vars.text-style-2(1.1rem, 400, 1.6rem);
+                    }
+                }
+            }
+            .read-more-link{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                @include vars.text-style-1(1rem, 500, normal);
+                text-decoration: none;
+                img{
+                    width: 1rem;
+                    height: 0.7rem;
+                }
+                span{
+                    color: vars.$mainColor;
+                }
+            }
+        }
+    }
+}

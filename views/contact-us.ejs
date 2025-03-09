@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <script src="/src/js/headerHandler.js" type="module" defer></script>
+    <script src="/src/js/contactUsHandler.js" type="module" defer></script>
+    <script src="/js/config.js"></script>
+    <title>
+        <%= title %>
+    </title>
+
+</head>
+
+<body>
+
+    <%- include('./partials/header.ejs') %>
+        <%- include('./partials/subpage-banner.ejs', {pageTitle: 'Contact Us' }) %>
+
+            <section class="contact-us">
+                <div class="container">
+                    <!-- Contact Form and Map Section -->
+                    <div class="row">
+                        <h2>Send Message</h2>
+                        <p class="w-50">
+                            Huge number of properties available here for buy, sell, and rent.
+                            Also, you find co-living properties with lots of opportunities.
+                        </p>
+                    </div>
+                    <div class="row pb-5">
+                        <!-- Left Column: Contact Form -->
+                        <div class="col-lg-7">
+                            <div class="contact-form">
+                                <form action="#">
+                                    <div class="row pb-4">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="First Name" required />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Last Name" required />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="number" class="form-control" placeholder="Phone Number"
+                                                required />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="email" class="form-control" placeholder="Email Address"
+                                                required />
+                                        </div>
+                                        <div class="col-12">
+                                            <input type="text" class="form-control" placeholder="Title"
+                                                required />
+                                        </div>
+                                        <div class="col-12">
+                                            <textarea class="form-control" placeholder="Message" rows="6"
+                                                required></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Contact Us</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Right Column: Google Map -->
+                        <div class="col-lg-5">
+                            <div class="map-container">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8316437707116!2d-121.91195838467962!3d37.35410777983757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fccb4d94a3e4d%3A0x9b0bb7b7f8b94f4a!2sAmazon%20Rainforest!5e0!3m2!1sen!2sus!4v1694053819472!5m2!1sen!2sus"
+                                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact Details -->
+                    <div class="row contact-details pb-5">
+                        <div class="col-md-4 text-center">
+                            <div class="contact-item row align-items-center">
+                                <div class="col-3">
+                                    <i class="fas fa-map-marker-alt" style="font-size: 4rem;"></i>
+                                </div>
+                                <div class="col-9">
+                                    <h4>Address</h4>
+                                    <p>2104 Charmaine Lane<br />Amarillo, New York</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="contact-item row align-items-center">
+                                <div class="col-3">
+                                    <i class="fas fa-phone-alt" style="font-size: 4rem;"></i>
+                                </div>
+                                <div class="col-9">
+                                    <h4>Call Us</h4>
+                                    <p>(123) 456-7890<br />(987) 654-3210</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="contact-item row align-items-center">
+                                <div class="col-3">
+                                    <i class="fas fa-envelope" style="font-size: 4rem;"></i>
+                                </div>
+                                <div class="col-9">
+                                    <h4>Email Us</h4>
+                                    <p>admin@example.com<br />info@example.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- *************** footer **************** -->
+            <%- include('./partials/footer.ejs') %>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

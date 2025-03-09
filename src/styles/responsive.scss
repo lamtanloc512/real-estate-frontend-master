@@ -1,0 +1,1301 @@
+// @import 'variables';
+@use 'variables' as vars;
+
+@media screen and (max-width: 356px) {
+    body{
+        width: 100vw;
+    }
+
+    /*  -------------------- Auth  -------------------- */
+    .auth-bg {
+        .container-overlay {
+            background: none;
+            max-width: 100%;
+            width: 100%;
+            .right{
+                display: none;
+            }
+            .left{
+                flex: 0 0 100%;
+            }
+        }
+    }
+
+    /*  -------------------- Header  -------------------- */
+    header {
+        .navbar {
+            .container{
+                justify-content: center;
+            }
+        }
+        &>.container {
+            .hero-section {
+                .row{
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 0;
+                }
+                .heading-and-paragraph {
+                    padding-left: 5px;
+                    h1 {
+                        font-size: 3rem;
+                        font-weight: 600;
+                        line-height: 3.7rem;
+                        width: 95%;
+                    }
+                    p {
+                        width: 95%;
+                    }
+                }
+            }
+            .customer-rating {
+                position: absolute;
+                top: 65%;
+                right: 10%;
+            }
+        }
+    }
+    
+    /*  -------------------- Sub banner  -------------------- */
+    .sub-banner{
+        p{
+            display: none;
+        }
+    }
+
+    /* ---------------- About Us ---------------- */
+    #about-us{
+        padding: 100px 0 50px 0;
+        .container{
+            flex-wrap: wrap;
+            .about-content{
+                padding-left: 5px;
+                .about-title{
+                    @include vars.text-style-1(2rem, 500, 3rem);
+                }
+                .about-text{
+                    @include vars.text-style-2(0.9rem, 400, 1.5rem);
+                }
+                .about-list{
+                    width: 100%;
+                    padding: 0;
+                    .about-item{
+                        img{
+                            width: 3rem;
+                            height: 3rem;
+                        }
+                        p{
+                            @include vars.text-style-2(0.9rem, 400, 1.6rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---------------- Services ---------------- */
+    #services{
+        &>.container{
+            .service-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .service-content{
+                flex-direction: column;
+            }
+        }
+        .sum-number-services-focus{
+            .service-list{
+                flex-wrap: wrap;
+                gap: 30px;
+
+                .service-focus-item{
+                    & img{
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---------------- why choose us ---------------- */
+    .why-choose-us{
+        .container{
+            .features{
+                flex-direction: column;
+            }
+        }
+    }
+    
+    /* ---------------- growing agents ---------------- */
+    #growing-agents{
+        &>.container{
+            .growing-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .growing-content{
+                flex-wrap: wrap;
+                .growing-item{
+                    flex-basis: 45%;
+                    .card-icon{
+                        div{
+                            @include vars.text-style-1(0.6rem, 400, normal);
+                        }
+                    }
+                    .growing-item-contact{
+                        span{
+                            @include vars.text-style-1(0.6rem, 400, normal);
+                        }
+                    }
+                }
+            }
+            .become-agent{
+                padding: 40px 0 40px 5px;
+                flex-direction: column;
+                .become-agent-group{
+                    align-items: flex-start;
+                    img{
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                    div{
+                        h3{
+                            @include vars.text-style-1(1.8rem, 400, 3rem);
+                        }
+                        p{
+                            @include vars.text-style-2(1rem, 400, 1rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---------------- feature listing ---------------- */
+    #features{
+        .container{
+            .feature-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .feature-content{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+    /* ---------------- our testimonials ---------------- */
+    #ourTestimonials {
+        .container{
+            .testimonials-title {
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+        }
+    }
+
+    /* ---------------- popular property ---------------- */
+    #popularProperties {
+        .container {
+            .property-title {
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .property-content {
+                flex-direction: column;
+            }
+        }
+    }
+
+    /* ---------------- our partner ---------------- */
+    #ourPartner{
+        .container{
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            img{
+                width: 80%;
+            }
+        }
+    }
+
+    /* ---------------- our facilities ---------------- */
+    #ourFacilities{
+        .container{
+            .row{
+                gap: 30px;
+                .facility-content{
+                    padding-left: 0;
+                    .facility-title{
+                        @include vars.text-style-1(2rem, 500, 3rem);
+                    }
+                    .facility-list{
+                        .facility-item{
+                            & span{
+                                @include vars.text-style-2(1rem, 300, 1.2rem);
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    /* ---------------- new feeds ---------------- */
+    #new-feeds{
+        .container{
+            .feeds-title{
+                @include vars.text-style-1(2rem ,500 ,3rem);
+            }
+            .feeds-content{
+                flex-direction: column;
+            }
+        }
+    }
+
+    /* ---------------- Footer ---------------- */
+    .cta{ 
+        .cta-card{
+            flex-direction: column;
+            gap: 30px;
+            .cta-text{
+                & p:first-child{
+                    @include vars.text-style-2(2rem, 500, normal);
+                }
+                & p:last-child{
+                    @include vars.text-style-2(1rem, 300, normal);
+                }
+            }
+            .cta-subcribe{
+                width: 80%;
+                input{
+                    padding: 1rem 1rem;
+                    @include vars.text-style-2(0.8rem, 300, normal);
+                }
+                button{
+                    @include vars.text-style-2(0.8rem, 400, normal);
+                }
+            }
+        }
+    }
+    .footer{
+        .container{
+            .footer-content{
+                flex-direction: column;
+                gap: 40px;
+                .footer-link-box{
+                    flex-direction: column;
+                    gap: 40px;
+                }
+            }
+            .copyright{
+                &>p{
+                    flex-basis: 45%;
+                }
+                .term-condition{
+                    flex-basis: 45%;
+                    p{
+                        &:first-child{
+                            padding-right: 10px;
+                        }
+                        &:last-child{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 356px) and (max-width: 573px) {
+    body{
+        width: 100vw;
+    }
+
+    /*  -------------------- Auth  -------------------- */
+    .auth-bg {
+        .container-overlay {
+            background: none;
+            max-width: 100%;
+            width: 100%;
+            .right{
+                display: none;
+            }
+            .left{
+                flex: 0 0 100%;
+            }
+        }
+    }
+
+    /*  -------------------- Header  -------------------- */
+    header {
+        .navbar {
+            .container{
+                justify-content: center;
+            }
+        }
+        &>.container {
+            .hero-section {
+                .row{
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 0;
+                }
+                .heading-and-paragraph {
+                    padding-left: 5px;
+                    h1 {
+                        font-size: 3rem;
+                        font-weight: 600;
+                        line-height: 3.7rem;
+                        width: 95%;
+                    }
+                    p {
+                        width: 95%;
+                    }
+                }
+                img[alt~="todd-kent"] {
+                    margin: 10px;
+                    width: 82%;
+                }
+            }
+
+            .customer-rating {
+                position: absolute;
+                top: 65%;
+                right: 10%;
+            }
+        }
+    }
+
+    /*  -------------------- Sub banner  -------------------- */
+    .sub-banner{
+        p{
+            display: none;
+        }
+    }
+
+    /* ---------------- About Us ---------------- */
+    #about-us{
+        padding: 100px 0 50px 0;
+        .container{
+            flex-wrap: wrap;
+            .about-content{
+                padding-left: 5px;
+                .about-title{
+                    @include vars.text-style-1(2rem, 500, 3rem);
+                }
+                .about-text{
+                    @include vars.text-style-2(0.9rem, 400, 1.5rem);
+                }
+                .about-list{
+                    width: 100%;
+                    padding: 0;
+                    .about-item{
+                        img{
+                            width: 3rem;
+                            height: 3rem;
+                        }
+                        p{
+                            @include vars.text-style-2(0.9rem, 400, 1.6rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---------------- Services ---------------- */
+    #services{
+        &>.container{
+            .service-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .service-content{
+                flex-direction: column;
+            }
+        }
+        .sum-number-services-focus{
+            .service-list{
+                flex-wrap: wrap;
+                gap: 30px;
+
+                .service-focus-item{
+                    & img{
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---------------- growing agents ---------------- */
+    #growing-agents{
+        &>.container{
+            .growing-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .growing-content{
+                flex-wrap: wrap;
+                .growing-item{
+                    flex-basis: 45%;
+                    .card-icon{
+                        div{
+                            @include vars.text-style-1(0.6rem, 400, normal);
+                        }
+                    }
+                    .growing-item-contact{
+                        span{
+                            @include vars.text-style-1(0.6rem, 400, normal);
+                        }
+                    }
+                }
+            }
+            .become-agent{
+                padding: 40px 0 40px 5px;
+                flex-direction: column;
+                .become-agent-group{
+                    align-items: flex-start;
+                    img{
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                    div{
+                        h3{
+                            @include vars.text-style-1(1.8rem, 400, 3rem);
+                        }
+                        p{
+                            @include vars.text-style-2(1rem, 400, 1rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---------------- why choose us ---------------- */
+    .why-choose-us{
+        .container{
+            .features{
+                flex-direction: column;
+            }
+        }
+    }
+
+    /* ---------------- feature listing ---------------- */
+    #features{
+        .container{
+            .feature-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .feature-content{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+    /* ---------------- our testimonials ---------------- */
+    #ourTestimonials {
+        .container{
+            .testimonials-title {
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+        }
+    }
+
+    /* ---------------- popular property ---------------- */
+    #popularProperties {
+        .container {
+            .property-title {
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .property-content {
+                flex-direction: column;
+            }
+        }
+    }
+
+    /* ---------------- our partner ---------------- */
+    #ourPartner{
+        .container{
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            img{
+                width: 80%;
+            }
+        }
+    }
+
+    /* ---------------- our facilities ---------------- */
+    #ourFacilities{
+        .container{
+            .row{
+                gap: 30px;
+                .facility-content{
+                    padding-left: 0;
+                    .facility-title{
+                        @include vars.text-style-1(2rem, 500, 3rem);
+                    }
+                    .facility-list{
+                        .facility-item{
+                            & span{
+                                @include vars.text-style-2(1rem, 300, 1.2rem);
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    /* ---------------- new feeds ---------------- */
+    #new-feeds{
+        .container{
+            .feeds-title{
+                @include vars.text-style-1(2rem ,500 ,3rem);
+            }
+            .feeds-content{
+                flex-direction: column;
+            }
+        }
+    }
+
+    /* ---------------- Footer ---------------- */
+    .cta{ 
+        .cta-card{
+            flex-direction: column;
+            gap: 30px;
+            .cta-text{
+                & p:first-child{
+                    @include vars.text-style-2(2rem, 500, normal);
+                }
+                & p:last-child{
+                    @include vars.text-style-2(1rem, 300, normal);
+                }
+            }
+            .cta-subcribe{
+                width: 80%;
+                input{
+                    padding: 1rem 1rem;
+                    @include vars.text-style-2(0.8rem, 300, normal);
+                }
+                button{
+                    @include vars.text-style-2(0.8rem, 400, normal);
+                }
+            }
+        }
+    }
+    .footer{
+        .container{
+            .footer-content{
+                flex-direction: column;
+                gap: 40px;
+                .footer-link-box{
+                    flex-direction: column;
+                    gap: 40px;
+                }
+            }
+            .copyright{
+                &>p{
+                    flex-basis: 45%;
+                }
+                .term-condition{
+                    flex-basis: 45%;
+                    p{
+                        &:first-child{
+                            padding-right: 10px;
+                        }
+                        &:last-child{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 573px) and (max-width: 767px) {
+    body{
+        width: 100vw;
+    }
+
+    /*  -------------------- Auth  -------------------- */
+    .auth-bg {
+        .container-overlay {
+            background: none;
+            max-width: 100%;
+            width: 100%;
+            .right{
+                display: none;
+            }
+            .left{
+                flex: 0 0 100%;
+            }
+        }
+    }
+
+    /*  -------------------- Header  -------------------- */
+    header {
+        &>.container {
+            .hero-section {
+                .row{
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 0;
+                }
+                .heading-and-paragraph {
+                    padding-left: 5px;
+                    h1 {
+                        font-size: 3rem;
+                        font-weight: 600;
+                        line-height: 3.7rem;
+                        width: 95%;
+                    }
+                    p {
+                        width: 95%;
+                    }
+                }
+                img[alt~="todd-kent"] {
+                    margin: 10px;
+                    width: 82%;
+                }
+            }
+
+            .customer-rating {
+                position: absolute;
+                top: 55%;
+                right: 10%;
+            }
+        }
+    }
+
+    /*  -------------------- Sub banner  -------------------- */
+    .sub-banner{
+        p{
+            display: none;
+        }
+    }
+
+    /* ---------------- About Us ---------------- */
+    #about-us{
+        padding: 100px 0 50px 0;
+        .container{
+            flex-wrap: wrap;
+            .about-content{
+                padding-left: 5px;
+                .about-title{
+                    @include vars.text-style-1(2rem, 500, 3rem);
+                }
+                .about-text{
+                    @include vars.text-style-2(0.9rem, 400, 1.5rem);
+                }
+                .about-list{
+                    width: 100%;
+                    padding: 0;
+                    .about-item{
+                        img{
+                            width: 3rem;
+                            height: 3rem;
+                        }
+                        p{
+                            @include vars.text-style-2(0.9rem, 400, 1.6rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---------------- Services ---------------- */
+    #services{
+        &>.container{
+            .service-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .service-content{
+                flex-wrap: wrap;
+                .service-item{
+                    flex-basis: 45%;
+                }
+            }
+        }
+        .sum-number-services-focus{
+            .service-list{
+                flex-wrap: wrap;
+                gap: 30px;
+
+                .service-focus-item{
+                    & img{
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---------------- growing agents ---------------- */
+    #growing-agents{
+        &>.container{
+            .growing-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .growing-content{
+                flex-wrap: wrap;
+                .growing-item{
+                    flex-basis: 45%;
+                    .card-icon{
+                        div{
+                            @include vars.text-style-1(0.6rem, 400, normal);
+                        }
+                    }
+                    .growing-item-contact{
+                        span{
+                            @include vars.text-style-1(0.6rem, 400, normal);
+                        }
+                    }
+                }
+            }
+            .become-agent{
+                .become-agent-group{
+                    img{
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                    div{
+                        h3{
+                            @include vars.text-style-1(2rem, 500, 3rem);
+                        }
+                        p{
+                            @include vars.text-style-2(1rem, 400, 1rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---------------- feature listing ---------------- */
+    #features{
+        .container{
+            .feature-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .feature-content{
+                .feature-item{
+                    flex-basis: 48%;
+                }
+            }
+        }
+    }
+
+    /* ---------------- our testimonials ---------------- */
+    #ourTestimonials {
+        .container{
+            .testimonials-title {
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+        }
+    }
+
+    /* ---------------- popular property ---------------- */
+    #popularProperties {
+        .container {
+            .property-title {
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .property-content {
+                justify-content: center;
+                .property-item {
+                    flex-basis: 45%;
+                }
+            }
+        }
+    }
+
+    /* ---------------- our partner ---------------- */
+    #ourPartner{
+        .container{
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+    }
+
+    /* ---------------- our facilities ---------------- */
+    #ourFacilities{
+        .container{
+            .row{
+                gap: 30px;
+                .facility-content{
+                    .facility-title{
+                        @include vars.text-style-1(2rem, 500, 3rem);
+                    }
+                }
+            }
+            
+        }
+    }
+
+    /* ---------------- new feeds ---------------- */
+    #new-feeds{
+        .container{
+            .feeds-title{
+                @include vars.text-style-1(2rem ,500 ,3rem);
+            }
+            .feeds-content{
+                flex-direction: column;
+            }
+        }
+    }
+
+    /* ---------------- Footer ---------------- */
+    .cta{ 
+        .cta-card{
+            flex-direction: column;
+            gap: 30px;
+            .cta-text{
+                & p:first-child{
+                    @include vars.text-style-2(2rem, 500, normal);
+                }
+                & p:last-child{
+                    @include vars.text-style-2(1rem, 300, normal);
+                }
+            }
+            .cta-subcribe{
+                width: 80%;
+                input{
+                    padding: 1rem 1rem;
+                    @include vars.text-style-2(0.8rem, 300, normal);
+                }
+                button{
+                    @include vars.text-style-2(0.8rem, 400, normal);
+                }
+            }
+        }
+    }
+    .footer{
+        .container{
+            .footer-content{
+                flex-direction: column;
+                gap: 40px;
+                .footer-link-box{
+                    flex-direction: column;
+                    gap: 40px;
+                }
+            }
+            .copyright{
+                &>p{
+                    flex-basis: 45%;
+                }
+                .term-condition{
+                    flex-basis: 45%;
+                    p{
+                        &:first-child{
+                            padding-right: 10px;
+                        }
+                        &:last-child{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 993px) {
+    body{
+        width: 100vw;
+    }
+
+    /*  -------------------- Auth  -------------------- */
+    .auth-bg {
+        .container-overlay {
+            background: none;
+            .right{
+                display: none;
+            }
+            .left{
+                flex: 0 0 100%;
+            }
+        }
+    }
+
+    /*  -------------------- Header  -------------------- */
+    header {
+        &>.container {
+            .hero-section {
+                .row{
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 0;
+                }
+                .heading-and-paragraph {
+                    padding-left: 5px;
+                    h1 {
+                        font-size: 3rem;
+                        font-weight: 600;
+                        line-height: 3.7rem;
+                        width: 95%;
+                    }
+                    p {
+                        width: 95%;
+                    }
+                }
+                img[alt~="todd-kent"] {
+                    margin: 10px;
+                    width: 82%;
+                }
+            }
+
+            .customer-rating {
+                position: absolute;
+                top: 55%;
+                right: 10%;
+            }
+        }
+    }
+
+    /* ---------------- About Us ---------------- */
+    #about-us{
+        padding: 100px 0 50px 0;
+        .container{
+            flex-wrap: wrap;
+            .about-content{
+                padding-left: 5px;
+                .about-title{
+                    @include vars.text-style-1(2rem, 500, 3rem);
+                }
+                .about-text{
+                    @include vars.text-style-2(0.9rem, 400, 1.5rem);
+                }
+                .about-list{
+                    width: 100%;
+                    padding: 0;
+                    .about-item{
+                        img{
+                            width: 3rem;
+                            height: 3rem;
+                        }
+                        p{
+                            @include vars.text-style-2(0.9rem, 400, 1.6rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---------------- Services ---------------- */
+    #services{
+        &>.container{
+            .service-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .service-content{
+                flex-wrap: wrap;
+                .service-item{
+                    flex-basis: 45%;
+                }
+            }
+        }
+    }
+
+    /* ---------------- growing agents ---------------- */
+    #growing-agents{
+        &>.container{
+            .growing-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .growing-content{
+                flex-wrap: wrap;
+                .growing-item{
+                    flex-basis: 45%;
+                    .card-icon{
+                        div{
+                            @include vars.text-style-1(0.6rem, 400, normal);
+                        }
+                    }
+                    .growing-item-contact{
+                        span{
+                            @include vars.text-style-1(0.6rem, 400, normal);
+                        }
+                    }
+                }
+            }
+            .become-agent{
+                .become-agent-group{
+                    img{
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                    div{
+                        h3{
+                            @include vars.text-style-1(2rem, 500, 3rem);
+                        }
+                        p{
+                            @include vars.text-style-2(1rem, 400, 1rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ---------------- feature listing ---------------- */
+    #features{
+        .container{
+            .feature-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .feature-content{
+                .feature-item{
+                    flex-basis: 48%;
+                }
+            }
+        }
+    }
+
+    #ourTestimonials {
+        .container{
+            .testimonials-title {
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+        }
+    }
+
+    /* ---------------- popular property ---------------- */
+    #popularProperties {
+        .container {
+            .property-title {
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .property-content {
+                justify-content: center;
+                .property-item {
+                    flex-basis: 45%;
+                }
+            }
+        }
+    }
+
+    /* ---------------- our partner ---------------- */
+    #ourPartner{
+        .container{
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+    }
+
+    /* ---------------- our facilities ---------------- */
+    #ourFacilities{
+        .container{
+            .row{
+                gap: 30px;
+                .facility-content{
+                    .facility-title{
+                        @include vars.text-style-1(2rem, 500, 3rem);
+                    }
+                }
+            }
+            
+        }
+    }
+
+    /* ---------------- new feeds ---------------- */
+    #new-feeds{
+        .container{
+            .feeds-title{
+                @include vars.text-style-1(2rem ,500 ,3rem);
+            }
+            .feeds-content{
+                .feeds-item{
+                    flex-basis: 45%;
+                }
+            }
+        }
+    }
+
+    /* ---------------- Footer ---------------- */
+    .cta{ 
+        .cta-card{
+            flex-direction: column;
+            gap: 30px;
+            .cta-text{
+                & p:first-child{
+                    @include vars.text-style-2(2rem, 500, normal);
+                }
+                & p:last-child{
+                    @include vars.text-style-2(1rem, 300, normal);
+                }
+            }
+            .cta-subcribe{
+                width: 80%;
+                input{
+                    padding: 1rem 1rem;
+                    @include vars.text-style-2(0.8rem, 300, normal);
+                }
+                button{
+                    @include vars.text-style-2(0.8rem, 400, normal);
+                }
+            }
+        }
+    }
+    .footer{
+        .container{
+            .footer-content{
+                flex-direction: column;
+                gap: 40px;
+                .footer-link-box{
+                    width: 100%;
+                }
+            }
+            .copyright{
+                .term-condition{
+                    p{
+                        &:first-child{
+                            padding-right: 10px;
+                        }
+                        &:last-child{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1180px) {
+    body{
+        width: 100vw;
+    }
+
+    /*  -------------------- Auth  -------------------- */
+    .auth-bg {
+        .container-overlay {
+            background: none;
+            .right{
+                display: none;
+            }
+            .left{
+                flex: 0 0 100%;
+            }
+        }
+    }
+
+    /*  -------------------- Header --------------------  */
+    header {
+        &>.container {
+            .hero-section {
+                .row{
+                    margin: 0;
+                }
+                .heading-and-paragraph {
+                    padding-left: 5px;
+                    h1 {
+                        font-size: 3rem;
+                        font-weight: 600;
+                        line-height: 3.7rem;
+                        width: 95%;
+                    }
+                    p {
+                        width: 95%;
+                    }
+                }
+
+                div:has(> img[alt~="todd-kent"]) {
+                    margin: 0;
+                }
+                .col-lg-5{
+                    margin: 0;
+                }
+            }
+
+            .customer-rating {
+                position: absolute;
+                top: 15%;
+                right: -3%;
+            }
+        }
+    }
+
+    /* ---------------- feature listing ---------------- */
+    #features{
+        .container{
+            .feature-title{
+                @include vars.text-style-1(2rem, 500, 3rem);
+            }
+            .feature-content{
+                .feature-item{
+                    flex-basis: 45%;
+                }
+            }
+        }
+    }
+
+    /* ---------------- our partner ---------------- */
+    #ourPartner{
+        .container{
+            justify-items: center;
+            img{
+                width: 80%;
+            }
+        }
+    }
+
+    /* ---------------- Footer ---------------- */
+    .cta{ 
+        .cta-card{
+            flex-direction: column;
+            gap: 30px;
+            .cta-text{
+                & p:first-child{
+                    @include vars.text-style-2(2rem, 500, normal);
+                }
+                & p:last-child{
+                    @include vars.text-style-2(1rem, 300, normal);
+                }
+            }
+            .cta-subcribe{
+                width: 80%;
+                input{
+                    padding: 1rem 1rem;
+                    @include vars.text-style-2(0.8rem, 300, normal);
+                }
+                button{
+                    @include vars.text-style-2(0.8rem, 400, normal);
+                }
+            }
+        }
+    }
+    .footer{
+        .container{
+            .footer-content{
+                flex-direction: column;
+                gap: 40px;
+                .footer-link-box{
+                    width: 100%;
+                }
+            }
+            .copyright{
+                .term-condition{
+                    p{
+                        &:first-child{
+                            padding-right: 10px;
+                        }
+                        &:last-child{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

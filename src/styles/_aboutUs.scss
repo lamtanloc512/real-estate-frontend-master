@@ -1,0 +1,146 @@
+// @import 'variables';
+@use 'variables' as vars;
+
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$text-color: #333;
+$background-color: #f8f9fa;
+$light-gray: #f8f9fa;
+
+/* ---------------- About Us ---------------- */
+#about-us {
+    background-color: vars.$pureWhite;
+
+    .container {
+        display: flex;
+        align-items: center;
+
+        .about-banner {
+            img {
+                width: 100%;
+            }
+        }
+
+        .about-content {
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .about-subtitle {
+                text-transform: uppercase;
+                color: vars.$mainColor;
+                @include vars.text-style-2(1.1rem, 400, 1.7rem);
+            }
+
+            .about-title {
+                text-transform: capitalize;
+                margin: 0;
+                color: vars.$secondaryColor;
+                @include vars.text-style-1(2.8rem, 600, 3.5rem);
+            }
+
+            .about-text {
+                margin: 0;
+                width: 90%;
+                color: vars.$slateGray;
+                @include vars.text-style-2(1rem, 400, 1.6rem);
+            }
+
+            .about-list {
+                width: 90%;
+                list-style: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+
+                .about-item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    & img {
+                        width: 3.7rem;
+                        height: 3.7rem;
+                    }
+
+                    h5 {
+                        color: vars.$secondaryColor;
+                        @include vars.text-style-1(1.2rem, 500, 2rem);
+                    }
+
+                    & p {
+                        margin: 0;
+                        color: vars.$slateGray;
+                        @include vars.text-style-2(1rem, 400, 1.6rem);
+                    }
+                }
+            }
+
+            .learn-more-link {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                @include vars.text-style-1(1rem, 500, 1.6rem);
+
+                img {
+                    width: 1rem;
+                    height: 0.7rem;
+                }
+
+                span {
+                    color: vars.$mainColor;
+                }
+            }
+        }
+    }
+}
+
+// Why Choose Us Section
+.why-choose-us {
+    background: $background-color;
+    padding: 3rem 0;
+
+    .container {
+        text-align: center;
+
+        h2 {
+            margin-bottom: 2rem;
+            color: $primary-color;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            // flex-wrap: wrap;
+            gap: 1rem;
+
+            .feature {
+                background: #fff;
+                padding: 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                // flex: 1;
+                // max-width: 30%;
+                flex-basis: 30%;
+                text-align: center;
+
+                i {
+                    font-size: 2rem;
+                    color: $primary-color;
+                    margin-bottom: 1rem;
+                }
+
+                h3 {
+                    margin-bottom: 1rem;
+                    color: $text-color;
+                }
+
+                p {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}

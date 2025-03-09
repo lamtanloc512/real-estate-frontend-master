@@ -1,0 +1,174 @@
+@use 'variables' as vars;
+.cta{ 
+    background: vars.$mainColor;
+
+    .cta-card{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 70px 0;
+
+        .cta-text{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            & p:first-child{
+                margin: 0;
+                color: vars.$pureWhite;
+                @include vars.text-style-2(2.5rem, 600, normal);
+            }
+
+            & p:last-child{
+                margin: 0;
+                color: vars.$pureWhite;
+                @include vars.text-style-2(1.1rem, 400, normal);
+            }
+        }
+
+        .cta-subcribe{
+            display: flex;
+            width: 50%;
+            input{
+                color: #B0B0B0;
+                @include vars.text-style-2(1rem, 400, normal);
+                text-transform: capitalize;
+                border-radius: 8px 0px 0px 8px;
+                border: none;
+                width: 70%;
+                padding: 1.5rem 1.5rem;
+            }
+            button{
+                width: 30%;
+                @include vars.place-center;
+                border: none;
+                background-color: vars.$secondaryColor;
+                border-radius: 0px 8px 8px 0px;
+                color: vars.$pureWhite;
+                @include vars.text-style-2(1rem, 400, normal);
+            }
+        }
+    }
+}
+
+.footer{
+    display: flex;
+    padding-top: 80px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background: #181C2B;
+
+    .container{
+        .footer-content{
+            border-bottom: 1px solid #D2D2D2;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 80px;
+            gap: 20px;
+
+            .footer-brand{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 25px;
+                flex-basis: 35%;
+    
+                .logo img{
+                    width: 12rem;
+                    height: 3.7rem;
+                }
+    
+                .footer-brand-text{
+                    margin: 0;
+                    margin-top: 15px;
+                    color: vars.$pureWhite;
+                    text-transform: capitalize;
+                    max-width: 380px;
+                    @include vars.text-style-1(1rem, 400, 1.6rem);
+                }
+        
+                .footer-icons{
+                    display: flex;
+                    gap: 20px;
+    
+                    img{
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+
+            .footer-link-box{
+                display: flex;
+                justify-content: space-around;
+                flex-basis: 65%;
+    
+                .footer-list{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    flex-basis: 30%;
+    
+                    .footer-item-title{
+                        margin: 0;
+                        color: vars.$pureWhite;
+                        @include vars.text-style-2(1.5rem, 600, normal);
+                    }
+    
+                    .footer-item-link{
+                        margin: 0;
+                        color: vars.$pureWhite;
+                        @include vars.text-style-1(1rem, 500, normal);
+                    }
+                    & a{
+                        text-decoration: none;
+                        @include vars.hover-link;
+                    }
+                    .footer-address, .footer-call, .footer-mail{
+                        color: vars.$pureWhite;
+                        @include vars.text-style-1(1rem, 500, normal);
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+    
+                        i{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+                .footer-list:last-child{
+                    flex-basis: 40%;
+                }
+            }
+        }
+
+        .copyright{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 30px 0px;
+    
+            .term-condition{
+                display: flex;
+
+                p{
+                    &:first-child{
+                        padding-right: 40px;
+                        border-right: 1px solid #D2D2D2;
+                    }
+                    &:last-child{
+                        padding-left: 20px;
+                    }
+                }
+            }
+            & p{
+                text-transform: capitalize;
+                margin: 0;
+                color: vars.$pureWhite;
+                @include vars.text-style-1(0.8rem, 400, normal);
+            }
+        }
+    }
+}

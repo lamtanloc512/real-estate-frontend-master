@@ -1,0 +1,1222 @@
+@media screen and (max-width: 356px) {
+  body {
+    width: 100vw;
+  }
+  /*  -------------------- Auth  -------------------- */
+  .auth-bg .container-overlay {
+    background: none;
+    max-width: 100%;
+    width: 100%;
+  }
+  .auth-bg .container-overlay .right {
+    display: none;
+  }
+  .auth-bg .container-overlay .left {
+    flex: 0 0 100%;
+  }
+  /*  -------------------- Header  -------------------- */
+  header .navbar .container {
+    justify-content: center;
+  }
+  header > .container .hero-section .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+  }
+  header > .container .hero-section .heading-and-paragraph {
+    padding-left: 5px;
+  }
+  header > .container .hero-section .heading-and-paragraph h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.7rem;
+    width: 95%;
+  }
+  header > .container .hero-section .heading-and-paragraph p {
+    width: 95%;
+  }
+  header > .container .customer-rating {
+    position: absolute;
+    top: 65%;
+    right: 10%;
+  }
+  /*  -------------------- Sub banner  -------------------- */
+  .sub-banner p {
+    display: none;
+  }
+  /* ---------------- About Us ---------------- */
+  #about-us {
+    padding: 100px 0 50px 0;
+  }
+  #about-us .container {
+    flex-wrap: wrap;
+  }
+  #about-us .container .about-content {
+    padding-left: 5px;
+  }
+  #about-us .container .about-content .about-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #about-us .container .about-content .about-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+  #about-us .container .about-content .about-list {
+    width: 100%;
+    padding: 0;
+  }
+  #about-us .container .about-content .about-list .about-item img {
+    width: 3rem;
+    height: 3rem;
+  }
+  #about-us .container .about-content .about-list .about-item p {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+  }
+  /* ---------------- Services ---------------- */
+  #services > .container .service-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #services > .container .service-content {
+    flex-direction: column;
+  }
+  #services .sum-number-services-focus .service-list {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  #services .sum-number-services-focus .service-list .service-focus-item img {
+    width: 4rem;
+    height: 4rem;
+  }
+  /* ---------------- why choose us ---------------- */
+  .why-choose-us .container .features {
+    flex-direction: column;
+  }
+  /* ---------------- growing agents ---------------- */
+  #growing-agents > .container .growing-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #growing-agents > .container .growing-content {
+    flex-wrap: wrap;
+  }
+  #growing-agents > .container .growing-content .growing-item {
+    flex-basis: 45%;
+  }
+  #growing-agents > .container .growing-content .growing-item .card-icon div {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  #growing-agents > .container .growing-content .growing-item .growing-item-contact span {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  #growing-agents > .container .become-agent {
+    padding: 40px 0 40px 5px;
+    flex-direction: column;
+  }
+  #growing-agents > .container .become-agent .become-agent-group {
+    align-items: flex-start;
+  }
+  #growing-agents > .container .become-agent .become-agent-group img {
+    width: 3rem;
+    height: 3rem;
+  }
+  #growing-agents > .container .become-agent .become-agent-group div h3 {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3rem;
+  }
+  #growing-agents > .container .become-agent .become-agent-group div p {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+  }
+  /* ---------------- feature listing ---------------- */
+  #features .container .feature-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #features .container .feature-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* ---------------- our testimonials ---------------- */
+  #ourTestimonials .container .testimonials-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  /* ---------------- popular property ---------------- */
+  #popularProperties .container .property-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #popularProperties .container .property-content {
+    flex-direction: column;
+  }
+  /* ---------------- our partner ---------------- */
+  #ourPartner .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  #ourPartner .container img {
+    width: 80%;
+  }
+  /* ---------------- our facilities ---------------- */
+  #ourFacilities .container .row {
+    gap: 30px;
+  }
+  #ourFacilities .container .row .facility-content {
+    padding-left: 0;
+  }
+  #ourFacilities .container .row .facility-content .facility-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #ourFacilities .container .row .facility-content .facility-list .facility-item span {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.2rem;
+  }
+  /* ---------------- new feeds ---------------- */
+  #new-feeds .container .feeds-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #new-feeds .container .feeds-content {
+    flex-direction: column;
+  }
+  /* ---------------- Footer ---------------- */
+  .cta .cta-card {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .cta .cta-card .cta-text p:first-child {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-text p:last-child {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-subcribe {
+    width: 80%;
+  }
+  .cta .cta-card .cta-subcribe input {
+    padding: 1rem 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-subcribe button {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .footer .container .footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .container .footer-content .footer-link-box {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .container .copyright > p {
+    flex-basis: 45%;
+  }
+  .footer .container .copyright .term-condition {
+    flex-basis: 45%;
+  }
+  .footer .container .copyright .term-condition p:first-child {
+    padding-right: 10px;
+  }
+  .footer .container .copyright .term-condition p:last-child {
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 356px) and (max-width: 573px) {
+  body {
+    width: 100vw;
+  }
+  /*  -------------------- Auth  -------------------- */
+  .auth-bg .container-overlay {
+    background: none;
+    max-width: 100%;
+    width: 100%;
+  }
+  .auth-bg .container-overlay .right {
+    display: none;
+  }
+  .auth-bg .container-overlay .left {
+    flex: 0 0 100%;
+  }
+  /*  -------------------- Header  -------------------- */
+  header .navbar .container {
+    justify-content: center;
+  }
+  header > .container .hero-section .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+  }
+  header > .container .hero-section .heading-and-paragraph {
+    padding-left: 5px;
+  }
+  header > .container .hero-section .heading-and-paragraph h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.7rem;
+    width: 95%;
+  }
+  header > .container .hero-section .heading-and-paragraph p {
+    width: 95%;
+  }
+  header > .container .hero-section img[alt~=todd-kent] {
+    margin: 10px;
+    width: 82%;
+  }
+  header > .container .customer-rating {
+    position: absolute;
+    top: 65%;
+    right: 10%;
+  }
+  /*  -------------------- Sub banner  -------------------- */
+  .sub-banner p {
+    display: none;
+  }
+  /* ---------------- About Us ---------------- */
+  #about-us {
+    padding: 100px 0 50px 0;
+  }
+  #about-us .container {
+    flex-wrap: wrap;
+  }
+  #about-us .container .about-content {
+    padding-left: 5px;
+  }
+  #about-us .container .about-content .about-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #about-us .container .about-content .about-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+  #about-us .container .about-content .about-list {
+    width: 100%;
+    padding: 0;
+  }
+  #about-us .container .about-content .about-list .about-item img {
+    width: 3rem;
+    height: 3rem;
+  }
+  #about-us .container .about-content .about-list .about-item p {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+  }
+  /* ---------------- Services ---------------- */
+  #services > .container .service-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #services > .container .service-content {
+    flex-direction: column;
+  }
+  #services .sum-number-services-focus .service-list {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  #services .sum-number-services-focus .service-list .service-focus-item img {
+    width: 4rem;
+    height: 4rem;
+  }
+  /* ---------------- growing agents ---------------- */
+  #growing-agents > .container .growing-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #growing-agents > .container .growing-content {
+    flex-wrap: wrap;
+  }
+  #growing-agents > .container .growing-content .growing-item {
+    flex-basis: 45%;
+  }
+  #growing-agents > .container .growing-content .growing-item .card-icon div {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  #growing-agents > .container .growing-content .growing-item .growing-item-contact span {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  #growing-agents > .container .become-agent {
+    padding: 40px 0 40px 5px;
+    flex-direction: column;
+  }
+  #growing-agents > .container .become-agent .become-agent-group {
+    align-items: flex-start;
+  }
+  #growing-agents > .container .become-agent .become-agent-group img {
+    width: 3rem;
+    height: 3rem;
+  }
+  #growing-agents > .container .become-agent .become-agent-group div h3 {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3rem;
+  }
+  #growing-agents > .container .become-agent .become-agent-group div p {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+  }
+  /* ---------------- why choose us ---------------- */
+  .why-choose-us .container .features {
+    flex-direction: column;
+  }
+  /* ---------------- feature listing ---------------- */
+  #features .container .feature-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #features .container .feature-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* ---------------- our testimonials ---------------- */
+  #ourTestimonials .container .testimonials-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  /* ---------------- popular property ---------------- */
+  #popularProperties .container .property-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #popularProperties .container .property-content {
+    flex-direction: column;
+  }
+  /* ---------------- our partner ---------------- */
+  #ourPartner .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  #ourPartner .container img {
+    width: 80%;
+  }
+  /* ---------------- our facilities ---------------- */
+  #ourFacilities .container .row {
+    gap: 30px;
+  }
+  #ourFacilities .container .row .facility-content {
+    padding-left: 0;
+  }
+  #ourFacilities .container .row .facility-content .facility-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #ourFacilities .container .row .facility-content .facility-list .facility-item span {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.2rem;
+  }
+  /* ---------------- new feeds ---------------- */
+  #new-feeds .container .feeds-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #new-feeds .container .feeds-content {
+    flex-direction: column;
+  }
+  /* ---------------- Footer ---------------- */
+  .cta .cta-card {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .cta .cta-card .cta-text p:first-child {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-text p:last-child {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-subcribe {
+    width: 80%;
+  }
+  .cta .cta-card .cta-subcribe input {
+    padding: 1rem 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-subcribe button {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .footer .container .footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .container .footer-content .footer-link-box {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .container .copyright > p {
+    flex-basis: 45%;
+  }
+  .footer .container .copyright .term-condition {
+    flex-basis: 45%;
+  }
+  .footer .container .copyright .term-condition p:first-child {
+    padding-right: 10px;
+  }
+  .footer .container .copyright .term-condition p:last-child {
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 573px) and (max-width: 767px) {
+  body {
+    width: 100vw;
+  }
+  /*  -------------------- Auth  -------------------- */
+  .auth-bg .container-overlay {
+    background: none;
+    max-width: 100%;
+    width: 100%;
+  }
+  .auth-bg .container-overlay .right {
+    display: none;
+  }
+  .auth-bg .container-overlay .left {
+    flex: 0 0 100%;
+  }
+  /*  -------------------- Header  -------------------- */
+  header > .container .hero-section .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+  }
+  header > .container .hero-section .heading-and-paragraph {
+    padding-left: 5px;
+  }
+  header > .container .hero-section .heading-and-paragraph h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.7rem;
+    width: 95%;
+  }
+  header > .container .hero-section .heading-and-paragraph p {
+    width: 95%;
+  }
+  header > .container .hero-section img[alt~=todd-kent] {
+    margin: 10px;
+    width: 82%;
+  }
+  header > .container .customer-rating {
+    position: absolute;
+    top: 55%;
+    right: 10%;
+  }
+  /*  -------------------- Sub banner  -------------------- */
+  .sub-banner p {
+    display: none;
+  }
+  /* ---------------- About Us ---------------- */
+  #about-us {
+    padding: 100px 0 50px 0;
+  }
+  #about-us .container {
+    flex-wrap: wrap;
+  }
+  #about-us .container .about-content {
+    padding-left: 5px;
+  }
+  #about-us .container .about-content .about-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #about-us .container .about-content .about-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+  #about-us .container .about-content .about-list {
+    width: 100%;
+    padding: 0;
+  }
+  #about-us .container .about-content .about-list .about-item img {
+    width: 3rem;
+    height: 3rem;
+  }
+  #about-us .container .about-content .about-list .about-item p {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+  }
+  /* ---------------- Services ---------------- */
+  #services > .container .service-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #services > .container .service-content {
+    flex-wrap: wrap;
+  }
+  #services > .container .service-content .service-item {
+    flex-basis: 45%;
+  }
+  #services .sum-number-services-focus .service-list {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  #services .sum-number-services-focus .service-list .service-focus-item img {
+    width: 4rem;
+    height: 4rem;
+  }
+  /* ---------------- growing agents ---------------- */
+  #growing-agents > .container .growing-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #growing-agents > .container .growing-content {
+    flex-wrap: wrap;
+  }
+  #growing-agents > .container .growing-content .growing-item {
+    flex-basis: 45%;
+  }
+  #growing-agents > .container .growing-content .growing-item .card-icon div {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  #growing-agents > .container .growing-content .growing-item .growing-item-contact span {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  #growing-agents > .container .become-agent .become-agent-group img {
+    width: 3rem;
+    height: 3rem;
+  }
+  #growing-agents > .container .become-agent .become-agent-group div h3 {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #growing-agents > .container .become-agent .become-agent-group div p {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+  }
+  /* ---------------- feature listing ---------------- */
+  #features .container .feature-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #features .container .feature-content .feature-item {
+    flex-basis: 48%;
+  }
+  /* ---------------- our testimonials ---------------- */
+  #ourTestimonials .container .testimonials-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  /* ---------------- popular property ---------------- */
+  #popularProperties .container .property-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #popularProperties .container .property-content {
+    justify-content: center;
+  }
+  #popularProperties .container .property-content .property-item {
+    flex-basis: 45%;
+  }
+  /* ---------------- our partner ---------------- */
+  #ourPartner .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  /* ---------------- our facilities ---------------- */
+  #ourFacilities .container .row {
+    gap: 30px;
+  }
+  #ourFacilities .container .row .facility-content .facility-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  /* ---------------- new feeds ---------------- */
+  #new-feeds .container .feeds-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #new-feeds .container .feeds-content {
+    flex-direction: column;
+  }
+  /* ---------------- Footer ---------------- */
+  .cta .cta-card {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .cta .cta-card .cta-text p:first-child {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-text p:last-child {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-subcribe {
+    width: 80%;
+  }
+  .cta .cta-card .cta-subcribe input {
+    padding: 1rem 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-subcribe button {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .footer .container .footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .container .footer-content .footer-link-box {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .container .copyright > p {
+    flex-basis: 45%;
+  }
+  .footer .container .copyright .term-condition {
+    flex-basis: 45%;
+  }
+  .footer .container .copyright .term-condition p:first-child {
+    padding-right: 10px;
+  }
+  .footer .container .copyright .term-condition p:last-child {
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 993px) {
+  body {
+    width: 100vw;
+  }
+  /*  -------------------- Auth  -------------------- */
+  .auth-bg .container-overlay {
+    background: none;
+  }
+  .auth-bg .container-overlay .right {
+    display: none;
+  }
+  .auth-bg .container-overlay .left {
+    flex: 0 0 100%;
+  }
+  /*  -------------------- Header  -------------------- */
+  header > .container .hero-section .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+  }
+  header > .container .hero-section .heading-and-paragraph {
+    padding-left: 5px;
+  }
+  header > .container .hero-section .heading-and-paragraph h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.7rem;
+    width: 95%;
+  }
+  header > .container .hero-section .heading-and-paragraph p {
+    width: 95%;
+  }
+  header > .container .hero-section img[alt~=todd-kent] {
+    margin: 10px;
+    width: 82%;
+  }
+  header > .container .customer-rating {
+    position: absolute;
+    top: 55%;
+    right: 10%;
+  }
+  /* ---------------- About Us ---------------- */
+  #about-us {
+    padding: 100px 0 50px 0;
+  }
+  #about-us .container {
+    flex-wrap: wrap;
+  }
+  #about-us .container .about-content {
+    padding-left: 5px;
+  }
+  #about-us .container .about-content .about-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #about-us .container .about-content .about-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+  #about-us .container .about-content .about-list {
+    width: 100%;
+    padding: 0;
+  }
+  #about-us .container .about-content .about-list .about-item img {
+    width: 3rem;
+    height: 3rem;
+  }
+  #about-us .container .about-content .about-list .about-item p {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.6rem;
+  }
+  /* ---------------- Services ---------------- */
+  #services > .container .service-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #services > .container .service-content {
+    flex-wrap: wrap;
+  }
+  #services > .container .service-content .service-item {
+    flex-basis: 45%;
+  }
+  /* ---------------- growing agents ---------------- */
+  #growing-agents > .container .growing-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #growing-agents > .container .growing-content {
+    flex-wrap: wrap;
+  }
+  #growing-agents > .container .growing-content .growing-item {
+    flex-basis: 45%;
+  }
+  #growing-agents > .container .growing-content .growing-item .card-icon div {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  #growing-agents > .container .growing-content .growing-item .growing-item-contact span {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  #growing-agents > .container .become-agent .become-agent-group img {
+    width: 3rem;
+    height: 3rem;
+  }
+  #growing-agents > .container .become-agent .become-agent-group div h3 {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #growing-agents > .container .become-agent .become-agent-group div p {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+  }
+  /* ---------------- feature listing ---------------- */
+  #features .container .feature-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #features .container .feature-content .feature-item {
+    flex-basis: 48%;
+  }
+  #ourTestimonials .container .testimonials-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  /* ---------------- popular property ---------------- */
+  #popularProperties .container .property-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #popularProperties .container .property-content {
+    justify-content: center;
+  }
+  #popularProperties .container .property-content .property-item {
+    flex-basis: 45%;
+  }
+  /* ---------------- our partner ---------------- */
+  #ourPartner .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+  /* ---------------- our facilities ---------------- */
+  #ourFacilities .container .row {
+    gap: 30px;
+  }
+  #ourFacilities .container .row .facility-content .facility-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  /* ---------------- new feeds ---------------- */
+  #new-feeds .container .feeds-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #new-feeds .container .feeds-content .feeds-item {
+    flex-basis: 45%;
+  }
+  /* ---------------- Footer ---------------- */
+  .cta .cta-card {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .cta .cta-card .cta-text p:first-child {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-text p:last-child {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-subcribe {
+    width: 80%;
+  }
+  .cta .cta-card .cta-subcribe input {
+    padding: 1rem 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-subcribe button {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .footer .container .footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .container .footer-content .footer-link-box {
+    width: 100%;
+  }
+  .footer .container .copyright .term-condition p:first-child {
+    padding-right: 10px;
+  }
+  .footer .container .copyright .term-condition p:last-child {
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1180px) {
+  body {
+    width: 100vw;
+  }
+  /*  -------------------- Auth  -------------------- */
+  .auth-bg .container-overlay {
+    background: none;
+  }
+  .auth-bg .container-overlay .right {
+    display: none;
+  }
+  .auth-bg .container-overlay .left {
+    flex: 0 0 100%;
+  }
+  /*  -------------------- Header --------------------  */
+  header > .container .hero-section .row {
+    margin: 0;
+  }
+  header > .container .hero-section .heading-and-paragraph {
+    padding-left: 5px;
+  }
+  header > .container .hero-section .heading-and-paragraph h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.7rem;
+    width: 95%;
+  }
+  header > .container .hero-section .heading-and-paragraph p {
+    width: 95%;
+  }
+  header > .container .hero-section div:has(> img[alt~=todd-kent]) {
+    margin: 0;
+  }
+  header > .container .hero-section .col-lg-5 {
+    margin: 0;
+  }
+  header > .container .customer-rating {
+    position: absolute;
+    top: 15%;
+    right: -3%;
+  }
+  /* ---------------- feature listing ---------------- */
+  #features .container .feature-title {
+    font-family: Inter;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+  #features .container .feature-content .feature-item {
+    flex-basis: 45%;
+  }
+  /* ---------------- our partner ---------------- */
+  #ourPartner .container {
+    justify-items: center;
+  }
+  #ourPartner .container img {
+    width: 80%;
+  }
+  /* ---------------- Footer ---------------- */
+  .cta .cta-card {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .cta .cta-card .cta-text p:first-child {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-text p:last-child {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-subcribe {
+    width: 80%;
+  }
+  .cta .cta-card .cta-subcribe input {
+    padding: 1rem 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .cta .cta-card .cta-subcribe button {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .footer .container .footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .container .footer-content .footer-link-box {
+    width: 100%;
+  }
+  .footer .container .copyright .term-condition p:first-child {
+    padding-right: 10px;
+  }
+  .footer .container .copyright .term-condition p:last-child {
+    padding-left: 10px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

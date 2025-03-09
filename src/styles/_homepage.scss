@@ -1,0 +1,215 @@
+@use 'variables' as vars;
+.home-section{
+    &>.container {
+        position: relative;
+
+        .hero-section {
+            .row {
+                overflow: hidden;
+                flex-wrap: nowrap;
+            }
+
+            .heading-and-paragraph {
+                padding: 60px 0;
+
+                h1 {
+                    @include vars.text-style-1(4.5rem, 700, 5rem);
+                    margin-bottom: 20px;
+                    color: vars.$secondaryColor;
+                    text-transform: capitalize
+                }
+
+                p {
+                    margin-bottom: 20px;
+                    @include vars.text-style-2(1rem, 400, 1.6rem);
+                    color: vars.$slateGray;
+                }
+
+                button {
+                    @include vars.text-style-1(1.1rem, 500, 100%);
+                    background-color: vars.$mainColor;
+                    color: vars.$pureWhite;
+                    border: none;
+                    text-transform: capitalize
+                }
+            }
+
+            div:has(> img[alt~="todd-kent"]) {
+                margin: 30px;
+                overflow: hidden;
+                width: 100%;
+            }
+
+            img[alt~="todd-kent"] {
+                margin: -4.5rem;
+                width: 78%;
+            }
+        }
+
+        .customer-rating {
+            position: absolute;
+            top: 25%;
+            right: -3.5rem;
+            width: 12rem;
+            border-radius: 5px;
+            background: vars.$pureWhite;
+            box-shadow: 5px 5px 15px 0px rgba(74, 74, 74, 0.15);
+            padding: 10px;
+        }
+    }
+
+    .filter-container {
+        .filter-main {
+            position: relative;
+
+            .filter-menu {
+                border: 1px solid #dee2e6;
+                border-bottom: none;
+                width: fit-content;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 10px;
+                background-color: white;
+
+                li {
+                    border: none;
+
+                    .nav-link {
+                        --tw-text-opacity: 1;
+                        color: rgb(11 44 61 / var(--tw-text-opacity));
+                        border: none;
+                        @include vars.text-style-1(1.2rem, 400, normal);
+
+                        &.active {
+                            --tw-text-opacity: 1;
+                            color: rgb(11 44 61 / var(--tw-text-opacity));
+                            background-color: transparent;
+                            border: none;
+                            border-bottom: 2px solid rgb(11 44 61 / var(--tw-text-opacity));
+                        }
+                    }
+                }
+            }
+
+            .filter-icon {
+                position: absolute;
+                top: 100%;
+                right: 100%;
+                transform: translateX(1px);
+                width: 50px;
+                height: 50px;
+                background-color: white;
+                border: 1px solid #dee2e6;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    width: 24px;
+                    color: #495057;
+                }
+
+                &:hover {
+                    background-color: #f0c84a;
+                }
+            }
+        }
+        .filter-section {
+            border: 1px solid #dee2e6;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 20px;
+            background-color: white;
+
+            select,
+            input {
+                font-size: 1rem;
+                border: none;
+            }
+
+            label {
+                --tw-text-opacity: 1;
+                color: rgb(11 44 61 / var(--tw-text-opacity));
+                font-size: 1.2rem;
+            }
+
+            .col-location,
+            .col-propertyType,
+            .col-priceRange,
+            .col-bedrooms,
+            .col-bathrooms {
+                border-right: 1px solid #dee2e6;
+            }
+
+            .col-propertyType select,
+            .col-bedrooms select,
+            .col-bathrooms select {
+                width: 80%;
+            }
+
+            .col-priceRange select,
+            .col-garages select {
+                width: 95%;
+            }
+
+            .col-propertySize select {
+                width: 60%;
+            }
+
+            .col-propertySize {
+                position: relative;
+
+                .search-icon {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 20px;
+                    cursor: pointer;
+                    border: none;
+                    width: 50px;
+                    height: 50px;
+                    --tw-text-opacity: 1;
+                    background-color: rgb(179 147 89 / var(--tw-text-opacity));
+                    border-radius: 10px;
+                }
+            }
+
+            .filter-disabled {
+                display: none !important;
+            }
+    
+            
+    
+            .btn-search {
+                background-color: #f8e8d6;
+                --tw-text-opacity: 1;
+                color: rgb(179 147 89 / var(--tw-text-opacity));
+                border: none;
+                width: 80%;
+                height: 80%;
+                font-size: 1.3rem;
+            }
+    
+            .btn-search:hover {
+                --tw-text-opacity: 1;
+                background-color: rgb(11 44 61 / var(--tw-text-opacity));
+                color: white;
+            }
+    
+            .row-advance {
+                display: none;
+            }
+    
+            .filter-active.row-advance {
+                display: flex;
+            }
+            
+        }
+        
+    }
+}

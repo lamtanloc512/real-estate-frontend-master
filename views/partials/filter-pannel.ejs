@@ -1,0 +1,439 @@
+<aside class="col-md-4 sidebar p-3">
+    <div class="row">
+        <h3 class="mb-5"><u>Property Search <span class="">.</span></u></h3>
+        <form action="#" class="relative">
+            <div class="fill-group mb-3">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.39648 6.41666H8.60482" stroke="#016450" stroke-width="1.5"
+                        stroke-linecap="round"></path>
+                    <path d="M7 8.02083V4.8125" stroke="#016450" stroke-width="1.5" stroke-linecap="round">
+                    </path>
+                    <path
+                        d="M2.11231 4.9525C3.26148 -0.0991679 10.7456 -0.0933345 11.889 4.95833C12.5598 7.92167 10.7165 10.43 9.10064 11.9817C7.92814 13.1133 6.07314 13.1133 4.89481 11.9817C3.28481 10.43 1.44148 7.91583 2.11231 4.9525Z"
+                        stroke="#0B2C3D" stroke-width="1.5"></path>
+                </svg>
+                <div class="dropdown">
+                    <button
+                        class="btn dropdown-toggle text-secondary border w-100 d-flex justify-content-between align-items-center"
+                        type="button" id="chooseProvinceDistrictWardDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <span id="defaultText">Location</span>
+                        <span id="selectedTags"></span>
+                    </button>
+                    <div class="dropdown-menu p-2 w-100"
+                        aria-labelledby="chooseProvinceDistrictWardDropdown">
+                        <button type="button" class="btn-close position-absolute top-0 end-0 me-3 mt-3"
+                            aria-label="Close"></button>
+                        <ul class="province-search-select-list custom-grid-dropdown">
+
+                        </ul>
+
+                        <ul class="district-search-select-list custom-grid-dropdown d-none">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fill-group mb-3">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.64311 0H0V4.64311H4.64311V0ZM3.71437 3.71437H0.928741V0.928741H3.71437V3.71437Z"
+                        fill="#0B2C3D"></path>
+                    <path
+                        d="M8.35742 0V4.64311H13.0005V0H8.35742ZM12.0718 3.71437H9.28616V0.928741H12.0718V3.71437Z"
+                        fill="#0B2C3D"></path>
+                    <path d="M0 13H4.64311V8.35689H0V13ZM0.928741 9.28563H3.71437V12.0713H0.928741V9.28563Z"
+                        fill="#0B2C3D"></path>
+                    <path
+                        d="M8.35742 13H13.0005V8.35689H8.35742V13ZM9.28616 9.28563H12.0718V12.0713H9.28616V9.28563Z"
+                        fill="#0B2C3D"></path>
+                    <path
+                        d="M6.96437 0H6.03563V6.03563H0V6.96437H6.03563V13H6.96437V6.96437H13V6.03563H6.96437V0Z"
+                        fill="#0B2C3D"></path>
+                </svg>
+                <div class="dropdown">
+                    <button
+                        class="btn dropdown-toggle text-secondary border w-100 d-flex justify-content-between align-items-center"
+                        type="button" id="projectDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Project
+                    </button>
+                    <div class="dropdown-menu p-2 w-100" aria-labelledby="projectDropdown"
+                        style="max-height: 160px; overflow-y: auto;">
+                        <ul class="project-select-list p-0">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fill-group mb-3">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.16602 12.8333H12.8327" stroke="#0B2C3D" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M1.7207 12.8333L1.74987 5.81583C1.74987 5.45999 1.91904 5.12169 2.19904 4.90002L6.28237 1.72085C6.70237 1.39418 7.29154 1.39418 7.71737 1.72085L11.8007 4.89418C12.0865 5.11585 12.2499 5.45416 12.2499 5.81583V12.8333"
+                        stroke="#0B2C3D" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round">
+                    </path>
+                    <path
+                        d="M9.04232 6.41666H4.95898C4.47482 6.41666 4.08398 6.8075 4.08398 7.29166V12.8333H9.91732V7.29166C9.91732 6.8075 9.52648 6.41666 9.04232 6.41666Z"
+                        stroke="#0B2C3D" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path d="M5.83398 9.47916V10.3542" stroke="#0B2C3D" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M6.125 4.375H7.875" stroke="#0B2C3D" stroke-width="1.5" stroke-miterlimit="10"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+
+                <div class="dropdown">
+                    <button
+                        class="btn dropdown-toggle text-secondary border w-100 d-flex justify-content-between align-items-center"
+                        type="button" id="propertyTypeDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Property Type
+                    </button>
+                    <div class="dropdown-menu p-2 w-100" aria-labelledby="propertyTypeDropdown"
+                        style="max-height: 160px; overflow-y: auto;">
+                        <ul class="property-type-select-list p-0">
+                            <li class="px-2" value="1">
+                                <span>
+                                    Đất
+                                </span>
+                            </li>
+                            <li class="px-2" value="2">
+                                <span>
+                                    Nhà ở
+                                </span>
+                            </li>
+                            <li class="px-2" value="3">
+                                <span>
+                                    Căn hộ / Chung cư
+                                </span>
+                            </li>
+                            <li class="px-2" value="4">
+                                <span>
+                                    Văn phòng, Mặt bằng
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="select-price-group mb-3">
+                <svg class="absolute top-1/2 -translate-y-1/2 z-[1] left-[20px] pointer-events-none"
+                    width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M5.78125 9.55323C5.78125 10.4132 6.44125 11.1066 7.26125 11.1066H8.93458C9.64792 11.1066 10.2279 10.4999 10.2279 9.75323C10.2279 8.9399 9.87458 8.65323 9.34792 8.46657L6.66125 7.53323C6.13458 7.34657 5.78125 7.0599 5.78125 6.24657C5.78125 5.4999 6.36125 4.89323 7.07458 4.89323H8.74792C9.56792 4.89323 10.2279 5.58657 10.2279 6.44657"
+                        stroke="#0B2C3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                    <path d="M8 4V12" stroke="#0B2C3D" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path
+                        d="M7.9987 14.6667C11.6806 14.6667 14.6654 11.6819 14.6654 8C14.6654 4.3181 11.6806 1.33333 7.9987 1.33333C4.3168 1.33333 1.33203 4.3181 1.33203 8C1.33203 11.6819 4.3168 14.6667 7.9987 14.6667Z"
+                        stroke="#0B2C3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                </svg>
+                <div class="dropdown">
+                    <button
+                        class="btn dropdown-toggle text-secondary border w-100 d-flex justify-content-between align-items-center"
+                        type="button" id="priceFilterDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Price Range
+                    </button>
+                    <div class="dropdown-menu p-3 w-100" aria-labelledby="priceFilterDropdown">
+                        <button type="button" class="btn-close position-absolute top-0 end-0 me-3 mt-3"
+                            aria-label="Close"></button>
+
+                        <div class="mb-3">
+                            <label for="priceMin" class="form-label">Min Price</label>
+                            <input type="number" class="form-control" id="priceMin" placeholder="From"
+                                min="0" max="999999" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="priceMax" class="form-label">Max Price</label>
+                            <input type="number" class="form-control" id="priceMax" placeholder="To" min="0"
+                                max="999999" />
+                        </div>
+
+                        <div style="max-height: 160px; overflow-y: auto;">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <input type="radio" class="form-check-input me-2" name="priceRange"
+                                        id="priceAll" value="all" checked />
+                                    <label class="form-check-label" for="priceAll">Price All</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="radio" class="form-check-input me-2" name="priceRange"
+                                        id="priceUnder5000" value="under5000" />
+                                    <label class="form-check-label" for="priceUnder5000">Under 5000</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="radio" class="form-check-input me-2" name="priceRange"
+                                        id="price5000to25000" value="5000to25000" />
+                                    <label class="form-check-label" for="price5000to25000">5000 -
+                                        25.000</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="radio" class="form-check-input me-2" name="priceRange"
+                                        id="price25000to50000" value="25000to50000" />
+                                    <label class="form-check-label" for="price25000to50000">25.000 -
+                                        50.000</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="radio" class="form-check-input me-2" name="priceRange"
+                                        id="price50000to150000" value="50000to150000" />
+                                    <label class="form-check-label" for="price50000to150000">50.000 -
+                                        150.000</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="radio" class="form-check-input me-2" name="priceRange"
+                                        id="price150000to250000" value="150000to250000" />
+                                    <label class="form-check-label" for="price150000to250000">150.000 -
+                                        250.000</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="radio" class="form-check-input me-2" name="priceRange"
+                                        id="priceOver250000" value="over250000" />
+                                    <label class="form-check-label" for="priceOver250000">Over
+                                        250.000</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-3">
+                            <button class="btn btn-secondary btn-sm btn-reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="fill-group mb-3">
+                <svg class="absolute top-1/2 -translate-y-1/2 z-[1] left-[20px] pointer-events-none"
+                    width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33268 4.66667H4.66602V9.33334H9.33268V4.66667Z" stroke="#0B2C3D"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M2.91602 12.8333C3.87852 12.8333 4.66602 12.0458 4.66602 11.0833V9.33333H2.91602C1.95352 9.33333 1.16602 10.1208 1.16602 11.0833C1.16602 12.0458 1.95352 12.8333 2.91602 12.8333Z"
+                        stroke="#0B2C3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                    <path
+                        d="M2.91602 4.66667H4.66602V2.91667C4.66602 1.95417 3.87852 1.16667 2.91602 1.16667C1.95352 1.16667 1.16602 1.95417 1.16602 2.91667C1.16602 3.87917 1.95352 4.66667 2.91602 4.66667Z"
+                        stroke="#0B2C3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                    <path
+                        d="M9.33398 4.66667H11.084C12.0465 4.66667 12.834 3.87917 12.834 2.91667C12.834 1.95417 12.0465 1.16667 11.084 1.16667C10.1215 1.16667 9.33398 1.95417 9.33398 2.91667V4.66667Z"
+                        stroke="#0B2C3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                    <path
+                        d="M11.084 12.8333C12.0465 12.8333 12.834 12.0458 12.834 11.0833C12.834 10.1208 12.0465 9.33333 11.084 9.33333H9.33398V11.0833C9.33398 12.0458 10.1215 12.8333 11.084 12.8333Z"
+                        stroke="#0B2C3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                </svg>
+                <div class="dropdown">
+                    <button
+                        class="btn dropdown-toggle text-secondary border w-100 d-flex justify-content-between align-items-center"
+                        type="button" id="propertySizeDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Property Size
+                    </button>
+                    <div class="dropdown-menu p-2 w-100" aria-labelledby="propertySizeDropdown"
+                        style="max-height: 160px; overflow-y: auto;">
+                        <ul class="property-size-select-list p-0">
+                            <li class="px-2 py-1" value="under50">
+                                <span>
+                                    Under 50 squre fit
+                                </span>
+                            </li>
+                            <li class="px-2 py-1" value="50to70">
+                                <span>
+                                    50 to 70 squre fit
+                                </span>
+                            </li>
+                            <li class="px-2 py-1" value="70to90">
+                                <span>
+                                    70 to 90 squre fit
+                                </span>
+                            </li>
+                            <li class="px-2 py-1" value="90to110">
+                                <span>
+                                    90 to 110 squre fit
+                                </span>
+                            </li>
+                            <li class="px-2 py-1" value="over110">
+                                <span>
+                                    Over 110 squre fit
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fill-group mb-3">
+                <i class="fas fa-bed"></i>
+                <div class="dropdown">
+                    <button
+                        class="btn dropdown-toggle text-secondary border w-100 d-flex justify-content-between align-items-center"
+                        type="button" id="bedroomDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Bedrooms
+                    </button>
+                    <div class="dropdown-menu p-2 w-100" aria-labelledby="bedroomDropdown"
+                        style="max-height: 160px; overflow-y: auto;">
+                        <ul class="bedroom-select-list p-0">
+                            <li class="px-2 py-1" value="1">
+                                <span>
+                                    1 Bedroom
+                                </span>
+                            </li>
+                            <li class="px-2 py-1" value="2">
+                                <span>
+                                    2 Bedrooms
+                                </span>
+                            </li>
+                            <li class="px-2 py-1" value="3">
+                                <span>
+                                    3 Bedrooms
+                                </span>
+                            </li>
+                            <li class="px-2 py-1" value="4">
+                                <span>
+                                    4 Bedrooms
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-search px-4 mb-3">Search</button>
+        </form>
+    </div>
+
+    <div class="row">
+        <h3 class="my-5"><u>Featured Property <span class="">.</span></u></h3>
+        <div id="featuredPropertyCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="property-card mb-3">
+                        <div class="position-relative">
+                            <img src="https://www.cet.edu.vn/wp-content/uploads/2019/02/villa-khong-gian-sang-trong.jpg"
+                                alt="Property Image">
+                            <span class="badge"><i class="fas fa-camera"></i> 07</span>
+                            <span class="badge" style="top: 40px;"><i class="fas fa-film"></i> 08</span>
+                        </div>
+                        <div class="p-3">
+                            <h5>Orchid Castel de Paradise.</h5>
+                            <p class="text-muted"><u>18B Central Street, San Francisco</u></p>
+                            <p class="text-price">Price: $255300</p>
+                        </div>
+                    </div>
+                    <div class="property-card my-3">
+                        <div class="position-relative">
+                            <img src="https://dulichvinhhalong.net.vn/wp-content/uploads/2023/05/mau-villa-dep-1.jpg"
+                                alt="Property Image">
+                            <span class="badge"><i class="fas fa-camera"></i> 07</span>
+                            <span class="badge" style="top: 40px;"><i class="fas fa-film"></i> 08</span>
+                        </div>
+                        <div class="p-3">
+                            <h5>Sindrela Resort Villa.</h5>
+                            <p class="text-muted"><u>18B Central Street, San Francisco</u></p>
+                            <p class="text-price">Price: $185300</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="property-card mb-3">
+                        <div class="position-relative">
+                            <img src="https://s-real.vn/wp-content/uploads/2021/09/Villa-c%C3%B3-ph%E1%BA%A3i-l%C3%A0-bi%E1%BB%87t-th%E1%BB%B1-kh%C3%B4ng.jpg"
+                                alt="Property Image">
+                            <span class="badge"><i class="fas fa-camera"></i> 07</span>
+                            <span class="badge" style="top: 40px;"><i class="fas fa-film"></i> 08</span>
+                        </div>
+                        <div class="p-3">
+                            <h5>Sindrela Resort Villa.</h5>
+                            <p class="text-muted"><u>18B Central Street, San Francisco</u></p>
+                            <p class="text-price">Price: $185300</p>
+                        </div>
+                    </div>
+                    <div class="property-card my-3">
+                        <div class="position-relative">
+                            <img src="https://andochine.com.vn/wp-content/uploads/V3-mordern-overview-1-scaled.jpg"
+                                alt="Property Image">
+                            <span class="badge"><i class="fas fa-camera"></i> 07</span>
+                            <span class="badge" style="top: 40px;"><i class="fas fa-film"></i> 08</span>
+                        </div>
+                        <div class="p-3">
+                            <h5>Orchid Castel de Paradise.</h5>
+                            <p class="text-muted"><u>18B Central Street, San Francisco</u></p>
+                            <p class="text-price">Price: $255300</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="control-btn" type="button" data-bs-target="#featuredPropertyCarousel"
+                    data-bs-slide="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="control-btn" type="button" data-bs-target="#featuredPropertyCarousel"
+                    data-bs-slide="next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3 class="my-5"><u>Our Agents<span>.</span></u></h3>
+        <div class="row justify-content-around m-0 p-0 mb-5">
+            <div class="card text-center agent-card p-0">
+                <div>
+                    <a href="agent-details.html">
+                        <img src="/images/propertyCategoriesPage/person3.webp"
+                            class="w-full object-contain block mx-auto" loading="lazy" width="130"
+                            height="154" alt="Albert S. Smith">
+                    </a>
+                </div>
+
+                <div>
+                    <h6 class="mt-3"><a href="agent-details.html">Albert S. Smith</a></h6>
+                    <p>Real Estate Agent</p>
+                </div>
+            </div>
+            <div class="card text-center agent-card p-0">
+                <div class="row">
+                    <a href="agent-details.html"
+                        class="block relative before:absolute before:content-[''] before:inset-x-0 before:bottom-0 before:bg-[#016450] before:w-full before:h-[calc(100%_-_30px)] before:z-[-1] before:rounded-[6px_6px_0px_0px]">
+                        <img src="/images/propertyCategoriesPage/person4.webp"
+                            class="w-full object-contain block mx-auto" loading="lazy" width="130"
+                            height="154" alt="Amelia Margaret">
+                    </a>
+                </div>
+
+                <div class="row">
+                    <h6 class="mt-3"><a href="agent-details.html">Amelia Margaret</a></h6>
+                    <p>Real Estate Broker</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3 class="my-4"><u>Tags<span>.</span></u></h3>
+        <ul class="tag-list">
+            <li class="badge border"><a href="#">Real Estate</a>
+            </li>
+            <li class="badge border"><a href="#">Appartment</a>
+            </li>
+            <li class="badge border"><a href="#">Sale Property</a>
+            </li>
+            <li class="badge border"><a href="#">Duplex</a>
+            </li>
+            <li class="badge border"><a href="#">Buy Property</a>
+            </li>
+            <li class="badge border"><a href="#">Houses</a>
+            </li>
+        </ul>
+    </div>
+</aside>

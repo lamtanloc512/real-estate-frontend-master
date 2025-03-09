@@ -1,0 +1,14 @@
+.sub-banner{
+    .header-background {
+        background-color: black;
+        position: relative;
+
+        img {
+            opacity: 0.5;
+        }
+
+        .container {
+            position: absolute;
+        }
+    }
+}

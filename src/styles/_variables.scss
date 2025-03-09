@@ -1,0 +1,101 @@
+$mainColor: #0061E0;
+$secondaryColor: #0D263B; 
+$pureWhite: #FFF;
+$slateGray: #7C8893;
+
+$font-family-1: Inter;
+$font-family-2: Roboto;
+
+
+@mixin text-style-1($font-size, $font-weight, $line-height){
+    font-family: $font-family-1;
+    font-style: normal;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+@mixin text-style-2($font-size, $font-weight, $line-height){
+    font-family: $font-family-2;
+    font-style: normal;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+@mixin hover-link{
+    transition: color 0.3s ease;
+
+    &:hover{
+        color: $mainColor;
+    }
+}
+
+@mixin hover-link-card{
+    transition: all 0.3s ease;
+
+    &:hover{
+        background: $mainColor;
+
+        & p or & span or & address{
+            color: $pureWhite;
+        }
+    }
+}
+
+@mixin hover-button{
+    color: white;
+    --tw-bg-opacity: 1;
+    background: linear-gradient(to left, rgb(11 44 61 / var(--tw-bg-opacity)) 50%, rgb(179 147 89 / var(--tw-bg-opacity)) 50%);
+    background-size: 200% 100%;
+    background-position: right top;
+    transition: all 0.1s ease;
+
+    &:hover {
+        --tw-bg-opacity: 1;
+        background-position: left top;
+        color: white;
+        border-color: rgb(179 147 89 / var(--tw-bg-opacity));
+    }
+}
+
+@mixin hover-image-link{
+    position: relative;
+    aspect-ratio: 2 / 1.5;
+    overflow: hidden;
+
+    & a {
+        &:hover img{
+            object-fit: cover;
+            transition:  0.5s ease;
+            height: 103%;
+        }
+    }
+}
+
+@mixin hover-button-1{
+    background: linear-gradient(to left,white 50%,  black 50%);
+    background-size: 200% 100%;
+    background-position:right top;
+    transition: all 1s ease;
+
+    &:hover{
+        background-position:left top;
+        color: white;
+        border-color: white;
+    }
+}
+
+@mixin ele-size_padding($width, $height, $padding){
+    @include ele-size($width, $height);
+    padding: $padding;
+}
+
+@mixin ele-size($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin place-center{
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,146 @@
+$primary-color: #FAFAFA;
+$border-color: #E0E0E0;
+$focus-color: #5C6BC0;
+
+.container {
+    
+    #propertyForm{
+        display: grid;
+        grid-template-areas:
+            "title title price"
+            "desc desc desc"
+            "location location location"
+            "type status status"
+            "info info info"
+            "add-images add-images add-images";
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 20px;
+        padding: 5px;
+        .div-title{
+            grid-area: title;
+        }
+        .div-price{
+            grid-area: price;
+        }
+        .div-desc{
+            grid-area: desc;
+        }
+        .div-location{
+            grid-area: location;
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            align-items: end;
+            gap: 15px;
+        }
+        .div-type{
+            grid-area: type;
+        }
+        .div-status{
+            grid-area: status;
+        }
+        .div-info{
+            grid-area: info;
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            align-items: end;
+            gap: 15px;
+        }
+    }
+
+    .input-label {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+        display: block;
+    }
+    
+    .input-field, .select-input, .textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 5px;
+        border: 1px solid $border-color;
+        box-sizing: border-box;
+        font-size: 14px;
+        color: #333;
+        outline: none;
+        
+        &:focus {
+            border-color: $focus-color;
+        }
+    }
+    
+    .div-add-images{
+        grid-area: add-images;
+        .custom-file-upload {
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            .file-upload {
+                position: relative;
+                
+                .file-label {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 8px 16px;
+                    // background-color: #007bff;
+                    --tw-bg-opacity: 1;
+                    background-color: rgb(11 44 61 / var(--tw-bg-opacity));
+                    color: #fff;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    transition: background-color 0.3s ease;
+                    
+                    &:hover {
+                        // background-color: #0056b3;
+                        background-color: rgb(179 147 89 / var(--tw-bg-opacity));
+                    }
+                    
+                    i {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .file-name {
+                font-size: 14px;
+                color: #555;
+                margin-top: 4px;
+                word-wrap: break-word;
+            }
+        }
+    }
+
+    .div-amenities{
+        #amenities-list{
+            list-style: none;
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            gap: 15px;    
+        }
+    }
+
+    #add-property{
+        color: white;
+        --tw-bg-opacity: 1;
+        background: linear-gradient(to left, rgb(11 44 61 / var(--tw-bg-opacity)) 50%, rgb(179 147 89 / var(--tw-bg-opacity)) 50%);
+        background-size: 200% 100%;
+        background-position: right top;
+        transition: all 0.1s ease;
+
+        &:hover {
+            --tw-bg-opacity: 1;
+            background-position: left top;
+            color: white;
+            border-color: rgb(179 147 89 / var(--tw-bg-opacity));
+        }
+    }
+
+}

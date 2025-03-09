@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+  <!-- DataTables -->
+  <link rel="stylesheet" href="/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" />
+  <link rel="stylesheet" href="/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" />
+  <link rel="stylesheet" href="/plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css" />
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <%- include('./partials/left-menu.ejs', { activePage: 'property' , pageHeader: 'Property' }) %>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+
+        <!-- Main content -->
+        <section class="content pt-5">
+          <div class="container-fluid">
+            <h2 style="text-align: center">Property Management</h2>
+            <div class="jumbotron container">
+              <div class="row form-group">
+                <div class="col-sm-3">
+                  <label for="input-property-title">Property Title</label>
+                </div>
+                <div class="col-sm-9">
+                  <input type="text" id="input-property-title" placeholder="Property Title" class="form-control" />
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-sm-3">
+                  <label for="input-description">Property Description</label>
+                </div>
+                <div class="col-sm-9">
+                  <input type="text" id="input-description" placeholder="Property description" class="form-control" />
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-sm-3">
+                  <label for="input-price">Price</label>
+                </div>
+                <div class="col-sm-9">
+                  <input type="text" id="input-price" placeholder="Price" class="form-control" />
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-sm-3">
+                  <label for="select-project">Project</label>
+                </div>
+                <div class="col-sm-9">
+                  <select id="select-project" name="project" class="form-control">
+                    <option disabled selected value>--Select Project--</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group pt-3 px-3 border rounded">
+                <div class="col-sm-6">
+                  <div class="row form-group">
+                    <div class="col-sm-3">
+                      <label for="input-address">Address</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="text" id="input-address" name="address" placeholder="Address" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-sm-3">
+                      <label for="select-province">Province</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <select id="select-province" name="province" class="form-control">
+                        <option disabled selected value>--Select Province--</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row form-group">
+                    <div class="col-sm-3">
+                      <label for="select-district">District</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <select id="select-district" name="district" class="form-control">
+                        <option disabled selected value>--Select District--</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <div class="col-sm-3">
+                      <label for="select-ward">Ward</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <select id="select-ward" name="ward" class="form-control">
+                        <option disabled selected value>--Select Ward--</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-sm-3">
+                  <label for="select-property-type">Property Type</label>
+                </div>
+                <div class="col-sm-9">
+                  <select id="select-property-type" class="form-control">
+                    <option value="1">Đất</option>
+                    <option value="2">Nhà Ở</option>
+                    <option value="3">Căn hộ / Chung cư</option>
+                    <option value="4">Văn phòng, Mặt bằng</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-sm-3">
+                  <label for="select-legal-document">Legal Document</label>
+                </div>
+                <div class="col-sm-9">
+                  <select id="select-legal-document" class="form-control">
+                    <option disabled selected value>--Select Legal Document--</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group pt-3 px-3 border rounded">
+                <div class="col-sm-6 d-flex flex-column justify-content-center">
+                  <div class="row form-group align-items-center">
+                    <div class="col-sm-3">
+                      <label for="input-acreage">Acreage</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="number" id="input-acreage" placeholder="Acreage" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="row form-group align-items-center">
+                    <div class="col-sm-3">
+                      <label for="input-bedroom">Bedroom</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="number" id="input-bedroom" placeholder="Bedroom" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="row form-group align-items-center">
+                    <div class="col-sm-3">
+                      <label for="input-bathroom">Bathroom</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="number" id="input-bathroom" placeholder="Bathroom" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 d-flex flex-column justify-content-center">
+                  <div class="row form-group align-items-center">
+                    <div class="col-sm-3">
+                      <label for="input-balcony">Balcony</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="number" id="input-balcony" placeholder="Balcony" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="row form-group align-items-center">
+                    <div class="col-sm-3">
+                      <label for="input-number-floors">Number of Floors</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="number" id="input-number-floors" placeholder="Number of Floors"
+                        class="form-control" />
+                    </div>
+                  </div>
+                  <div class="row form-group align-items-center">
+                    <div class="col-sm-3">
+                      <label for="input-total-floors">Total Floors</label>
+                    </div>
+                    <div class="col-sm-9">
+                      <input type="number" id="input-total-floors" placeholder="Total Floors" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-add-images mb-4">
+                <label class="input-label">Add Images</label>
+                <div class="custom-file-upload">
+                  <div class="file-upload">
+                    <label for="image" class="file-label">
+                      <i class="fa fa-upload"></i> Upload Image
+                    </label>
+                    <input type="file" id="image" name="image" required multiple hidden />
+                  </div>
+                  <p id="file-name" class="file-name m-0">Please select property images</p>
+                </div>
+              </div>
+              <div class="row mb-3 pull-right">
+                <div class="col-sm-12 d-flex justify-content-around">
+                  <button class="btn btn-primary" id="btn-create">
+                    Create Property
+                  </button>
+                  <button id="btn-update" class="btn btn-info">
+                    Update Property
+                  </button>
+                  <button id="btn-approve" class="btn btn-success">
+                    Pending Approvals List
+                  </button>
+                </div>
+              </div>
+            </div>
+            <table class="table table-bordered table-striped table-hover text-center" id="property-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Property Title</th>
+                  <th>Price</th>
+                  <th>Property Description</th>
+                  <th>Address</th>
+                  <th>Property Type</th>
+                  <th>Acreage</th>
+                  <th>Bedroom</th>
+                  <th>Bathroom</th>
+                  <th>Project</th>
+                  <th>Approve Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <!-- Modal delete customer-->
+            <div class="modal fade" id="modal-delete">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-danger">Delete confirmation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h6 class="text-danger">Are you sure you want to delete this property?</h6>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-danger" id="btn-confirm-delete">
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal fade" id="modal-approval-list">
+              <div class="modal-dialog" style="width: 80%; max-width: 80%;">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-info" id="order-detail-title">Pending Approvals List</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+
+                    <table class="table table-bordered table-striped table-hover text-center" id="approval-table">
+                      <thead>
+                        <tr>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- loading spinner -->
+            <div id="loading-spinner" class="loading-overlay" style="display: none;">
+              <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+        <!-- /.content-wrapper -->
+      </div>
+  </div>
+
+  <%- include('./partials/footer.ejs') %>
+
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/dist/js/adminlte.js"></script>
+    <script src="/admin-src/property.js" type="module"></script>
+    <script src="/js/config.js"></script>
+    <script src="/admin-src/left-menu.js"></script>
+</body>
+
+</html>

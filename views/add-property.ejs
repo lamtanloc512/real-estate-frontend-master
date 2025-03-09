@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <script src="/src/js/headerHandler.js" type="module" defer></script>
+    <script src="/src/js/addPropertyHandler.js" type="module" defer></script>
+    <script src="/js/config.js"></script>
+    <title>
+        <%= title %>
+    </title>
+
+</head>
+
+<body>
+
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/subpage-banner.ejs', {pageTitle: title }) %>
+
+    <div class="container my-5">
+        <form id="propertyForm" enctype="multipart/form-data">
+            <div class="div-title">
+                <label for="property-title" class="input-label">Property Title</label>
+                <input id="property-title" class="input-field" type="text" placeholder="Title">
+            </div>
+            <div class="div-price">
+                <label for="input-price" class="input-label">Price</label>
+                <input id="input-price" placeholder="Price $" type="number">
+            </div>
+            <div class="div-desc">
+                <label for="property-description" class="input-label">Property Description</label>
+                <textarea class="input-field textarea" name="textarea" id="property-description" cols="30" rows="10"
+                    placeholder="Write your text here"></textarea>
+            </div>
+            <div class="div-location">
+                <div class="col-span-12">
+                    <label for="input-location" class="input-label">Location</label>
+                    <input id="input-location" class="input-field" type="text" placeholder="Address line">
+                </div>
+                <div>
+                    <select id="ward-select" class="input-field">
+                        <option  disabled selected value>Select Ward</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="district-select" class="input-field">
+                        <option  disabled selected value>Select District</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="province-select" class="input-field">
+                        <option  disabled selected value>Select Province</option>
+                    </select>
+                </div>
+            </div>
+            <div class="div-type">
+                <label for="select-property-type" class="input-label">Property Type</label>
+                <select id="select-property-type" class="select-input">
+                    <option value="1">Đất</option>
+                    <option value="2">Nhà Ở</option>
+                    <option value="3">Căn hộ / Chung cư</option>
+                    <option value="4">Văn phòng, Mặt bằng</option>
+                </select>
+            </div>
+            <div class="div-status">
+                <label for="select-property-status" class="input-label">Property Status</label>
+                <select id="select-property-status" class="select-input">
+                    <option value="1">Sale</option>
+                    <option value="2">For Rent</option>
+                </select>
+            </div>
+            <div class="div-info">
+                <div>
+                    <label for="input-acreage" class="input-label">Property info</label>
+                    <input id="input-acreage" class="input-field" type="number" placeholder="Area(sqft)">
+                </div>
+                <div>
+                    <input id="input-bedroom" class="input-field" type="number" placeholder="Number of Bedroom">
+                </div>
+                <div>
+                    <input id="input-bath" class="input-field" type="number" placeholder="Number of Bathroom">
+                </div>
+                <!-- <div>
+                    <input id="input-garage" class="input-field" type="number" placeholder="Number of Garage">
+                </div> -->
+            </div>
+            <div class="div-add-images">
+                <label class="input-label">Add Images</label>
+                <div class="custom-file-upload">
+                    <div class="file-upload">
+                        <label for="image" class="file-label">
+                            <i class="fa fa-upload"></i> Upload Image
+                        </label>
+                        <input type="file" id="image" name="image" required multiple hidden />
+                    </div>
+                    <p id="file-name" class="file-name m-0">Please select property images</p>
+                </div>
+            </div>
+            <div class="div-amenities">
+                <label for="select-project" class="input-label">Project</label>
+                <select id="select-project" class="select-input">
+                    <option  disabled selected value>Select Project</option>
+                </select>
+                <!-- <ul id="amenities-list" class="mt-3 p-0">
+                    <li class="amenities-item">
+                        <input type="radio" class="form-check-input me-2" name="priceRange"
+                            id="swimming-pool" value="1" checked />
+                        <label class="form-check-label" for="swimming-pool">Swimming Pool</label>
+                    </li>
+                    <li class="amenities-item">
+                        <input type="radio" class="form-check-input me-2" name="priceRange"
+                            id="garaze" value="2" />
+                        <label class="form-check-label" for="garaze">Garaze</label>
+                    </li>
+                    <li class="amenities-item">
+                        <input type="radio" class="form-check-input me-2" name="priceRange"
+                            id="fountain-park" value="3" />
+                        <label class="form-check-label" for="fountain-park">Fountain Park</label>
+                    </li>
+                    <li class="amenities-item">
+                        <input type="radio" class="form-check-input me-2" name="priceRange"
+                            id="shophouse" value="4" />
+                        <label class="form-check-label" for="shophouse">Shophouse</label>
+                    </li>
+                    <li class="amenities-item">
+                        <input type="radio" class="form-check-input me-2" name="priceRange"
+                            id="gym-center" value="5" />
+                        <label class="form-check-label" for="gym-center">GYM Center</label>
+                    </li>
+                    <li class="amenities-item">
+                        <input type="radio" class="form-check-input me-2" name="priceRange"
+                            id="nearby-school" value="6" />
+                        <label class="form-check-label" for="nearby-school">Nearby School</label>
+                    </li>
+                </ul> -->
+            </div>
+        </form>
+        <button id="add-property" type="submit" class="btn my-3 px-4 py-2">Save Property</button>
+    </div>
+
+
+    <%- include('./partials/error-modal.ejs') %>
+    <!-- *************** footer **************** -->
+    <%- include('./partials/footer.ejs') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

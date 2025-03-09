@@ -1,0 +1,133 @@
+@use 'variables' as vars;
+#new-feeds{
+    padding: 50px 0 100px 0;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        .feeds-subtitle{
+            text-transform: uppercase;
+            margin: 0;
+            color: vars.$mainColor;
+            @include vars.text-style-2(1.1rem, 400, 1.7rem);
+        }
+
+        .feeds-title{
+            margin: 0;
+            color: vars.$secondaryColor;
+            @include vars.text-style-1(2.8rem ,600 ,3.5rem);
+        }
+
+        .feeds-content{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 20px 0 20px 0;
+            gap: 25px;
+
+            .feeds-item{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: vars.$pureWhite;
+                box-shadow: 8px 10px 20px 1px rgba(152, 152, 152, 0.16);
+                gap: 20px;
+                flex-basis: 30%;
+                margin-bottom: 40px;
+
+                .feeds-image{
+                    margin: 0;
+                    display: flex;
+                    width: 100%;
+                    @include vars.hover-image-link;
+
+                    & a{
+                        text-decoration: none;
+
+                        & img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                .feeds-by{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0;
+                    gap: 25px;
+                    width: 85%;
+                }
+
+                .feeds-item-title{
+                    margin: 0;
+                    display: flex;
+                    height: 60px;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 20px;
+                    width: 90%;
+                    color: #071A1D;
+                    text-decoration: none;
+                    @include vars.text-style-2(1.5rem,500 ,2.2rem);
+                    @include vars.hover-link;
+                }
+
+                .feeds-readmore{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    padding: 20px 0 0 0;
+                    margin: 0 0 20px 0;
+                    align-items: center;
+                    gap: 5px;
+                    width: 85%;
+                    border-top: 1px solid #D9D9D9;
+                    justify-content:space-between;
+                }
+
+                .feeds-li-item{
+                    gap: 5px;
+                    display: flex;
+                    align-items: center;
+                    color: vars.$mainColor;
+
+                    & span{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        color: vars.$slateGray;
+                        @include vars.text-style-1(0.8rem, 400, 1.5rem);
+                    }
+
+                    i{
+                        color: vars.$mainColor;
+                    }
+                }
+
+            }
+        }
+
+        #btnViewAll{
+            border-radius: 50px;
+            border: 0.8px solid var(--Main-Colour, #0061E0);
+            display: inline-flex;
+            padding: 10px 30px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            background-color: vars.$pureWhite;
+
+            span{
+                color: vars.$slateGray;
+                @include vars.text-style-1(0.8rem, 500, 1.5rem);
+            }
+            i{
+                color: vars.$slateGray;
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+// @import 'variables';
+@use 'variables' as vars;
+
+/* ---------------- Header ---------------- */
+header {
+    background-color: #F4F9FF;
+
+    .navbar {
+        background-color: #ECF2F9;
+
+        .navbar-menu {
+            gap: 1.8rem;
+            position: relative;
+
+            #navbarNav {
+                .navbar-nav {
+                    gap: 1.8rem;
+
+                    .nav-link {
+                        @include vars.text-style-1(1rem, 400, normal);
+                        color: vars.$slateGray;
+                    }
+
+                    .nav-item.active .nav-link {
+                        color: vars.$mainColor !important;
+                        border-bottom: 3px solid vars.$mainColor;
+                    }
+                }
+            }
+
+            .header-actions-user {
+                box-shadow: 2px 5px 10px rgba(134, 134, 134, 0.10);
+                width: 2.6rem;
+                height: 2.6rem;
+                border: none;
+                border-radius: 50%;
+            }
+
+            .header-actions-add-property {
+                background-color: var(--Main-Colour, #0061E0);
+                padding: 1rem;
+                color: white;
+                border: none;
+                font-family: Inter;
+                font-style: normal;
+                font-size: 1rem;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            #userDropdown {
+                display: none;
+                position: absolute;
+                right: 50px;
+                top: 60px;
+                background: white;
+                border: 1px solid #ddd;
+                padding: 10px;
+                z-index: 1000;
+            
+                &.show {
+                    display: block;
+                }
+            
+                .dropdown-item {
+                    padding: 5px 10px;
+                    color: #333;
+                    text-decoration: none;
+            
+                    &:hover {
+                        background: #f0f0f0;
+                    }
+                }
+            }
+        }
+    }
+}

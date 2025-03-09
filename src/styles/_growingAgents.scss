@@ -1,0 +1,144 @@
+@use 'variables' as vars;
+#growing-agents{
+    background: vars.$pureWhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0 0 0;
+
+    &>.container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 100px;
+
+        .growing-subtitle{
+            text-transform: uppercase;
+            color: vars.$mainColor;
+            @include vars.ele-size_padding(fit-content, auto, 5px 20px 5px 20px);
+            @include vars.text-style-2(1.1rem, 400, 1.7rem);
+        }
+
+        .growing-title{
+            margin: 0;
+            text-align: center;
+            color: vars.$secondaryColor;
+            @include vars.text-style-1(2.8rem, 600, 5rem);
+        }
+
+        .growing-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 50px 0;
+            gap: 30px;
+            width: 100%;
+
+            .growing-item{
+                display: flex;
+                padding: 20px;
+                flex-direction: column;
+                gap: 10px;
+                background: vars.$pureWhite;
+                border-radius: 5px;
+                box-shadow: 2px 4px 10px 1px rgba(58, 58, 58, 0.08);
+                flex-basis: 30%;
+
+                .card-icon{
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                    div{
+                        position: absolute;
+                        left: 0;
+                        bottom: 5px;
+                        color: vars.$mainColor;
+                        background-color: vars.$pureWhite;
+                        padding: 5px 10px;
+                        opacity: 0.7;
+                        @include vars.text-style-1(0.8rem, 400, normal);
+                    }
+                } 
+
+                &.active .growing-person-name{
+                    color: vars.$mainColor !important;
+                }
+
+                .growing-person-name{
+                    text-decoration: none;
+                    margin: 0;
+                    color: #000;
+                    @include vars.text-style-1(1.2rem, 500, normal);
+                    @include vars.hover-link;
+                }
+
+                .growing-item-text{
+                    margin: 0;
+                    color: vars.$slateGray;
+                    @include vars.text-style-1(0.8rem, 400, normal);
+                }
+
+                .growing-item-contact{
+                    margin: 0;
+                    display: flex;
+                    color: vars.$slateGray;
+                    gap: 5px;
+
+                    span{
+                        @include vars.text-style-1(0.8rem, 400, normal);
+                    }
+
+                    img{
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+            }
+        }
+
+        .become-agent{
+            width: 100%;
+            background: #E2EFFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding: 40px;
+
+            .become-agent-group{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                }
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    h3{
+                        color: #282828;
+                        @include vars.text-style-1(2.3rem, 500, 3.2rem);
+                    }
+                    p{
+                        color: vars.$slateGray;
+                        @include vars.text-style-2(1.5rem, 400, 1.6rem);
+                    }
+                }
+            }
+            
+            button{
+                color: vars.$pureWhite;
+                background-color: vars.$mainColor;
+                padding: 10px 30px;
+                border: none;
+            }
+        }
+    }
+
+    
+}
